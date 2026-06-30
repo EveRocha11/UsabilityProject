@@ -1,0 +1,437 @@
+:root {
+  --color-bg-app: #f7f7fb;
+  --color-border: #ececf2;
+  --color-level-bg: #ede9fe;
+  --color-level-locked-bg: #f3f1fb;
+  --color-text-faint: #9b9aa3;
+  --color-accent: #d45038;
+  --color-success: #84cc16;
+}
+
+body {
+  background-color: var(--color-bg-app);
+}
+
+.dashboard-page {
+  width: 1440px;
+  min-height: 900px;
+  margin: 0 auto;
+  background-color: var(--color-bg-app);
+  font-family: var(--font-regular);
+}
+
+/* Header */
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  padding: 0 32px;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background-color: var(--color-purple-track);
+  color: var(--color-purple);
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.brand-name {
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--color-purple);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--color-purple-track);
+  color: var(--color-purple);
+  font-family: var(--font-semibold);
+  font-weight: 600;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--color-purple);
+  color: #ffffff;
+  font-family: var(--font-semibold);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Body layout */
+.dashboard-body {
+  display: flex;
+  align-items: stretch;
+  min-height: calc(900px - 72px);
+}
+
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-right: 1px solid var(--color-border);
+  padding: 24px 16px;
+}
+
+.nav-footer-item {
+  margin-top: auto;
+}
+
+.nav-footer-item span:last-child {
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--color-text-dark);
+}
+
+.help-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-family: var(--font-regular);
+  font-size: 14px;
+  color: var(--color-text-dark);
+}
+
+.nav-item.is-active {
+  background-color: var(--color-purple-track);
+  color: var(--color-purple);
+  font-family: var(--font-semibold);
+  font-weight: 600;
+}
+
+.nav-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.main-content {
+  flex: 1;
+  padding: 32px;
+}
+
+/* Greeting + stats */
+.content-header {
+  margin-bottom: 24px;
+}
+
+.greeting h1 {
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--color-text-dark);
+}
+
+.greeting p {
+  margin-top: 4px;
+  font-family: var(--font-regular);
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.stats-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 110px;
+  padding: 14px 10px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: var(--shadow-card);
+  text-align: center;
+}
+
+.stat-icon {
+  width: 22px;
+  height: 22px;
+  margin-bottom: 6px;
+}
+
+.stat-value {
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--color-text-dark);
+}
+
+.stat-label {
+  margin-top: 2px;
+  font-family: var(--font-regular);
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+/* Progress banner */
+.progress-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 28px;
+  margin-bottom: 24px;
+  border-radius: 18px;
+  background-image: linear-gradient(100deg, #7c3aed 0%, #a78bfa 100%);
+}
+
+.progress-banner-label {
+  font-family: var(--font-regular);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.progress-banner-points {
+  margin-top: 4px;
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: 28px;
+  color: #ffffff;
+}
+
+.progress-banner-streak {
+  margin-top: 4px;
+  font-family: var(--font-regular);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.progress-banner-right {
+  width: 360px;
+}
+
+.progress-banner-meta {
+  margin-bottom: 8px;
+  font-family: var(--font-regular);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: right;
+}
+
+.progress-track {
+  width: 100%;
+  height: 8px;
+  border-radius: 99px;
+  background-color: rgba(255, 255, 255, 0.35);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 99px;
+  background-color: var(--color-success);
+}
+
+/* Level cards */
+.levels-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.level-card {
+  position: relative;
+  flex: 1;
+  padding: 16px;
+  border-radius: 14px;
+  background-color: var(--color-level-bg);
+  border: 1.5px solid #ddd6fe;
+}
+
+.level-card.is-locked {
+  background-color: var(--color-level-locked-bg);
+}
+
+.level-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.level-badge {
+  padding: 3px 8px;
+  border-radius: 99px;
+  background-color: #ffffff;
+  font-family: var(--font-semibold);
+  font-weight: 600;
+  font-size: 11px;
+  color: var(--color-purple);
+}
+
+.level-status-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.level-title {
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-text-dark);
+}
+
+.level-duration {
+  margin-top: 2px;
+  font-family: var(--font-regular);
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.level-lesson {
+  margin-top: 8px;
+  font-family: var(--font-semibold);
+  font-weight: 600;
+  font-size: 13px;
+  color: var(--color-purple);
+}
+
+.level-card.is-locked .level-lesson {
+  color: var(--color-text-faint);
+}
+
+/* Daily challenge */
+.section-title {
+  margin-bottom: 12px;
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--color-text-dark);
+}
+
+.challenge-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 24px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  border: 1.5px solid #ddd6fe;
+  box-shadow: var(--shadow-card);
+}
+
+.challenge-icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  background-color: var(--color-level-bg);
+  border: 1.5px solid #ddd6fe;
+}
+
+.challenge-icon-box img {
+  width: 26px;
+  height: 26px;
+}
+
+.challenge-body {
+  flex: 1;
+}
+
+.challenge-text {
+  font-family: var(--font-semibold);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--color-text-dark);
+}
+
+.challenge-progress-track {
+  margin-top: 10px;
+  background-color: var(--color-level-bg);
+}
+
+.challenge-progress-fill {
+  background-color: var(--color-purple);
+}
+
+.challenge-meta {
+  margin-top: 6px;
+  font-family: var(--font-regular);
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.btn-success {
+  flex-shrink: 0;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--color-success);
+  color: #ffffff;
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn-purple {
+  flex-shrink: 0;
+  padding: 12px 36px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--color-purple);
+  color: #ffffff;
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}

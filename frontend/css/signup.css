@@ -1,0 +1,123 @@
+.element-signup {
+  display: flex;
+}
+
+.signup-card {
+  position: relative;
+  margin-top: 110px;
+  margin-left: 490px;
+  width: 460px;
+  height: 680px;
+}
+
+.signup-card .signup-title {
+  top: 28px;
+  left: 190px;
+  font-size: 24px;
+}
+
+.signup-card .signup-subtitle {
+  top: 57px;
+  left: 182px;
+  font-size: 13px;
+}
+
+.signup-card .step-label {
+  top: 88px;
+  left: 36px;
+}
+
+.signup-card .step-indicator {
+  top: 88px;
+  left: 344px;
+  font-size: 12px;
+}
+
+.signup-card .progress-track {
+  position: absolute;
+  top: 108px;
+  width: 125px;
+  height: 5px;
+  border-radius: 99px;
+  background-color: var(--color-purple-track);
+}
+
+.signup-card .progress-track.is-active {
+  background-color: var(--color-purple);
+}
+
+.signup-card .progress-track-1 { left: 36px; }
+.signup-card .progress-track-2 { left: 167px; }
+.signup-card .progress-track-3 { left: 299px; }
+
+.signup-card .label-name {
+  top: 128px;
+  left: 36px;
+}
+
+.signup-card .input-name {
+  top: 150px;
+  left: 36px;
+  width: 182px;
+  height: 48px;
+}
+
+.signup-card .label-lastname {
+  top: 128px;
+  left: 242px;
+}
+
+.signup-card .input-lastname {
+  top: 150px;
+  left: 242px;
+  width: 182px;
+  height: 48px;
+}
+
+.signup-card .label-email {
+  top: 212px;
+  left: 36px;
+}
+
+.signup-card .input-email {
+  top: 234px;
+  left: 36px;
+  width: 388px;
+  height: 48px;
+}
+
+.signup-card .label-password {
+  top: 296px;
+  left: 36px;
+}
+
+.signup-card .input-password {
+  top: 318px;
+  left: 36px;
+  width: 388px;
+  height: 48px;
+}
+
+.signup-card .hint {
+  top: 370px;
+  left: 36px;
+}
+
+.signup-card .label-confirm-password {
+  top: 404px;
+  left: 36px;
+}
+
+.signup-card .input-confirm-password {
+  top: 426px;
+  left: 36px;
+  width: 388px;
+  height: 48px;
+}
+
+.signup-card .cta-continue {
+  top: 614px;
+  left: 36px;
+  width: 388px;
+  height: 52px;
+}

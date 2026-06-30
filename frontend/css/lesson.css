@@ -1,0 +1,324 @@
+.lesson-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.lesson-top-bar {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.lesson-top-bar-end {
+  justify-content: flex-end;
+}
+
+.lesson-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.lesson-close img {
+  width: 100%;
+  height: 100%;
+}
+
+.lesson-progress-track {
+  flex: 1;
+  height: 14px;
+  background-color: #ddf0b8;
+}
+
+.lesson-hearts {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.lesson-hearts img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.lesson-hearts span {
+  position: relative;
+  margin-top: 2px;
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--color-accent);
+}
+
+.lesson-exercise {
+  width: fit-content;
+  margin: 32px auto 0;
+}
+
+.lesson-instruction {
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-text-dark);
+}
+
+.lesson-avatar-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* Character face, reassembled from the same vector pieces used for the
+   login/signup logo, rescaled to its own bounding box (133.06 x 158.67).
+   logo-01 (the near-white card backing) is intentionally left out here -
+   only the lavender circle (logo-02) and the face sit on the page background. */
+.avatar-face {
+  position: relative;
+  width: 220px;
+  height: 262px;
+}
+
+.avatar-face .avatar-vector {
+  position: absolute;
+}
+
+.avatar-face .avatar-vector img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.avatar-face .avatar-logo-02 { inset: 11.63% 13.96% 28.36% 14.07%; }
+.avatar-face .avatar-logo-03a { inset: 15.83% 60.93% 69.20% 21.00%; }
+.avatar-face .avatar-logo-03b { inset: 15.83% 21.00% 69.20% 61.04%; }
+.avatar-face .avatar-logo-04a { inset: 20.48% 65.58% 72.21% 25.65%; }
+.avatar-face .avatar-logo-04b { inset: 20.48% 25.54% 72.21% 65.58%; }
+.avatar-face .avatar-logo-05 { inset: 16.68% 17.97% 36.70% 18.07%; }
+.avatar-face .avatar-logo-06a { inset: 26.66% 53.03% 56.66% 27.06%; }
+.avatar-face .avatar-logo-06b { inset: 26.66% 26.95% 56.66% 53.03%; }
+.avatar-face .avatar-logo-07 { inset: 35.00% 46.97% 65.00% 46.97%; }
+.avatar-face .avatar-logo-08a { inset: 31.99% 59.42% 62.00% 33.44%; }
+.avatar-face .avatar-logo-08b { inset: 31.99% 33.44% 62.00% 59.42%; }
+.avatar-face .avatar-logo-09a { inset: 33.30% 59.63% 63.36% 36.47%; }
+.avatar-face .avatar-logo-09b { inset: 33.30% 36.36% 63.36% 59.63%; }
+.avatar-face .avatar-logo-10a { inset: 33.47% 61.58% 65.17% 36.80%; }
+.avatar-face .avatar-logo-10b { inset: 33.47% 38.42% 65.17% 60.06%; }
+.avatar-face .avatar-logo-11 { inset: 40.84% 38.96% 45.83% 39.07%; }
+.avatar-face .avatar-logo-12 { inset: 42.65% 45.56% 52.69% 45.67%; }
+.avatar-face .avatar-logo-13 { inset: 43.85% 49.78% 55.19% 47.84%; }
+.avatar-face .avatar-logo-14 { inset: 49.18% 46.00% 49.18% 46.00%; }
+
+.lesson-exercise-row {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.lesson-sentence-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 44px;
+}
+
+.lesson-sentence-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.lesson-speaker-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.lesson-sentence-bubble {
+  padding: 14px 24px;
+  border-radius: 99px;
+  background-color: var(--color-level-bg);
+  font-family: var(--font-regular);
+  font-size: 15px;
+  color: var(--color-text-dark);
+}
+
+.lesson-speak-btn {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 28px 10px 10px;
+  border: 1.5px solid #c4b5fd;
+  border-radius: 16px;
+  background-color: var(--color-level-bg);
+  cursor: pointer;
+}
+
+.lesson-speak-btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background-color: #ffffff;
+}
+
+.lesson-speak-btn-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.lesson-speak-btn span {
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: 13px;
+  color: var(--color-text-dark);
+  letter-spacing: 0.02em;
+}
+
+.lesson-bottom-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 32px;
+}
+
+.lesson-skip-btn {
+  background-color: var(--color-purple-soft);
+  color: #ffffff;
+}
+
+.lesson-feedback-label {
+  margin-top: auto;
+  padding-top: 32px;
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.lesson-feedback-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 12px;
+  padding: 20px 24px;
+  border: 1.5px solid #ddd6fe;
+  border-radius: 16px;
+  background-color: var(--color-level-bg);
+}
+
+.lesson-feedback-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.lesson-feedback-text {
+  flex: 1;
+}
+
+.lesson-feedback-title {
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--color-text-dark);
+}
+
+.lesson-feedback-subtitle {
+  margin-top: 2px;
+  font-family: var(--font-regular);
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+/* Level-complete screen */
+.lesson-complete-content {
+  width: fit-content;
+  margin: 120px auto 0;
+}
+
+.lesson-complete-row {
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+.lesson-complete-heading {
+  max-width: 460px;
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.15;
+  text-transform: uppercase;
+  color: var(--color-text-dark);
+}
+
+.lesson-avatar-box-lg {
+  flex-shrink: 0;
+}
+
+.avatar-face-lg {
+  width: 260px;
+  height: 310px;
+}
+
+.lesson-complete-actions {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.lesson-points-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-width: 120px;
+  padding: 16px 24px;
+  border-radius: 14px;
+  background-color: var(--color-level-bg);
+}
+
+.lesson-points-label {
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-purple);
+}
+
+.lesson-points-value {
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: 24px;
+  color: var(--color-text-dark);
+}
+
+.lesson-next-btn {
+  min-width: 130px;
+  font-size: 16px;
+}

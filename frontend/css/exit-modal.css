@@ -1,0 +1,69 @@
+.exit-modal-page {
+  position: relative;
+  width: 100%;
+  min-width: 940px;
+  min-height: 660px;
+  background-color: #ffffff;
+}
+
+.exit-modal-close {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--color-accent, #d45038);
+  color: #ffffff;
+  font-family: var(--font-regular);
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.exit-modal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding-top: 230px;
+}
+
+.exit-modal-text {
+  max-width: 400px;
+  font-family: var(--font-semibold);
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.3;
+  text-align: center;
+  color: var(--color-text-dark, #1c1916);
+}
+
+.exit-modal-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 64px;
+}
+
+.exit-modal-btn {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: 15px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.exit-modal-btn-confirm {
+  background-color: #84cc16;
+}
+
+.exit-modal-btn-cancel {
+  background-color: var(--color-accent, #d45038);
+}

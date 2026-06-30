@@ -1,0 +1,140 @@
+.element-login .rectangle {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(
+    19.84deg,
+    rgb(245, 243, 255) 48.755%,
+    rgb(237, 233, 254) 85.359%,
+    rgb(249, 249, 255) 121.96%
+  );
+}
+
+.login-card {
+  position: absolute;
+  top: 160px;
+  left: 500px;
+  width: 440px;
+  height: 580px;
+}
+
+.login-card .label-email {
+  top: 200px;
+  left: 36px;
+}
+
+.login-card .label-password {
+  top: 276px;
+  left: 36px;
+}
+
+.login-card .input-email {
+  top: 222px;
+  left: 36px;
+  width: 368px;
+  height: 52px;
+}
+
+.login-card .input-password {
+  top: 298px;
+  left: 36px;
+  width: 368px;
+  height: 52px;
+}
+
+.login-card .eye-icon {
+  position: absolute;
+  left: 329.5px;
+  top: 11.5px;
+  width: 24px;
+  height: 24px;
+}
+
+.login-card .eye-icon .eye-vector {
+  position: absolute;
+}
+
+.login-card .eye-icon .eye-vector img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.login-card .eye-icon .eye-vector-01 { inset: 13.62% 9.37% 13.46% 13.46%; }
+.login-card .eye-icon .eye-vector-02 { inset: 21.88% 36.98% 32.96% 9.38%; }
+.login-card .eye-icon .eye-vector-03 { inset: 34.38% 47.7% 47.7% 34.37%; }
+
+.login-card .hint {
+  top: 352px;
+  left: 36px;
+}
+
+.login-card .forgot-password {
+  top: 367px;
+  left: 240px;
+  font-size: 13px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.login-card .cta-sign-in {
+  top: 394px;
+  left: 36px;
+  width: 368px;
+  height: 52px;
+}
+
+.login-card .sign-up-link {
+  top: 470px;
+  left: 128px;
+  font-size: 13px;
+}
+
+/* Logo cluster - positions are percentages of the 1440x900 .element-login frame */
+.login-logo .logo-vector {
+  position: absolute;
+}
+
+.login-logo .logo-vector img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.login-logo .logo-01 { inset: 17.78% 44.93% 64.59% 45.83%; }
+.login-logo .logo-02 { inset: 19.83% 46.22% 69.59% 47.13%; }
+.login-logo .logo-03a { inset: 20.57% 50.56% 76.79% 47.77%; }
+.login-logo .logo-03b { inset: 20.57% 46.87% 76.79% 51.47%; }
+.login-logo .logo-04a { inset: 21.39% 50.99% 77.32% 48.2%; }
+.login-logo .logo-04b { inset: 21.39% 47.29% 77.32% 51.89%; }
+.login-logo .logo-05 { inset: 20.72% 46.59% 71.06% 47.5%; }
+.login-logo .logo-06a { inset: 22.48% 49.83% 74.58% 48.33%; }
+.login-logo .logo-06b { inset: 22.48% 47.42% 74.58% 50.73%; }
+.login-logo .logo-07 { inset: 23.95% 49.27% 76.05% 50.17%; }
+.login-logo .logo-08a { inset: 23.42% 50.42% 75.52% 48.92%; }
+.login-logo .logo-08b { inset: 23.42% 48.02% 75.52% 51.32%; }
+.login-logo .logo-09a { inset: 23.65% 50.44% 75.76% 49.2%; }
+.login-logo .logo-09b { inset: 23.65% 48.29% 75.76% 51.34%; }
+.login-logo .logo-10a { inset: 23.68% 50.62% 76.08% 49.23%; }
+.login-logo .logo-10b { inset: 23.68% 48.48% 76.08% 51.38%; }
+.login-logo .logo-11 { inset: 24.98% 48.53% 72.67% 49.44%; }
+.login-logo .logo-12 { inset: 25.3% 49.14% 73.88% 50.05%; }
+.login-logo .logo-13 { inset: 25.51% 49.53% 74.32% 50.25%; }
+.login-logo .logo-14 { inset: 26.45% 49.18% 73.26% 50.08%; }
+.login-logo .logo-15 { inset: 32.32% 48.81% 67.44% 49.71%; }
+
+.login-logo .logo-name {
+  position: absolute;
+  inset: 29.44% 46.25% 68.44% 46.18%;
+  font-size: 20px;
+  text-align: center;
+}
+
+.login-logo .logo-tagline {
+  position: absolute;
+  inset: 32.78% 46.86% 64.55% 47.22%;
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: 10px;
+  color: #d45038;
+  text-align: center;
+}
