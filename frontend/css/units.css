@@ -1,0 +1,128 @@
+.units-title {
+  margin-bottom: 24px;
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--color-text-dark);
+}
+
+/* Timeline + unit cards grid */
+.units-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  column-gap: 32px;
+  row-gap: 20px;
+  align-items: center;
+  max-width: 985px;
+}
+
+.timeline-line {
+  grid-column: 1;
+  grid-row: 1 / -1;
+  justify-self: center;
+  width: 3px;
+  height: 100%;
+  background-color: var(--color-purple);
+}
+
+.timeline-dot {
+  position: relative;
+  grid-column: 1;
+  justify-self: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--color-purple);
+}
+
+.timeline-dot.is-upcoming {
+  background-color: #ffffff;
+  border: 2px solid var(--color-purple);
+}
+
+.unit-card {
+  display: block;
+  grid-column: 2;
+  padding: 20px 24px;
+  border-radius: 16px;
+  background-color: var(--color-level-bg);
+  border: 1.5px solid var(--color-purple-soft);
+  color: inherit;
+}
+
+.unit-card.is-locked {
+  background-color: var(--color-level-locked-bg);
+  border-color: var(--color-border);
+}
+
+.unit-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.unit-badge {
+  padding: 3px 10px;
+  border-radius: 6px;
+  background-color: var(--color-purple);
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: 11px;
+  color: #ffffff;
+}
+
+.unit-status {
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-family: var(--font-semibold);
+  font-weight: 600;
+  font-size: 10px;
+  color: #ffffff;
+}
+
+.unit-status-done {
+  background-color: var(--color-success);
+}
+
+.unit-status-progress {
+  background-color: var(--color-accent);
+}
+
+.unit-lock-icon {
+  width: 22px;
+  height: 22px;
+}
+
+.unit-card-title {
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--color-text-dark);
+}
+
+.unit-card-meta {
+  margin-top: 2px;
+  margin-bottom: 16px;
+  font-family: var(--font-regular);
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.unit-progress-track {
+  height: 6px;
+  margin-bottom: 8px;
+  background-color: #ffffff;
+}
+
+.unit-progress-label {
+  font-family: var(--font-semibold);
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--color-purple);
+}
+
+.progress-fill.is-purple {
+  background-color: var(--color-purple);
+}

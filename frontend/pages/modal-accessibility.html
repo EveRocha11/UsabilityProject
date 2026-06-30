@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <title>Nivela - Accesibility</title>
+  <link rel="stylesheet" href="../css/globals.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/modal-accessibility.css">
+</head>
+<body>
+  <div class="accessibility-page">
+    <button type="button" class="accessibility-close" aria-label="Close">×</button>
+
+    <h1 class="accessibility-title">Accesibility</h1>
+
+    <div class="accessibility-grid">
+      <div class="accessibility-col">
+        <h2>Options</h2>
+
+        <div class="option-card">
+          <div class="option-card-info">
+            <img class="option-icon" src="../assets/img/icon-keyboard.svg" alt="" />
+            <div class="option-card-text">
+              <h3>Keyboard mode</h3>
+              <p>Browse the web using only the keyboard</p>
+            </div>
+          </div>
+          <div class="toggle-switch is-on">
+            <span class="toggle-text">ON</span>
+            <span class="toggle-knob"></span>
+          </div>
+        </div>
+
+        <div class="option-card">
+          <div class="option-card-info">
+            <img class="option-icon" src="../assets/img/icon-screen.svg" alt="" />
+            <div class="option-card-text">
+              <h3>Screen reader</h3>
+              <p>Optimized for screen readers</p>
+            </div>
+          </div>
+          <div class="toggle-switch is-off">
+            <span class="toggle-knob"></span>
+            <span class="toggle-text">OFF</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="accessibility-col">
+        <h2>Keyboard shortcuts</h2>
+
+        <div class="shortcuts-table">
+          <div class="shortcuts-row is-header">
+            <span>KEY</span>
+            <span>ACTION</span>
+          </div>
+          <div class="shortcuts-row">
+            <span>TAB</span>
+            <span>Next item</span>
+          </div>
+          <div class="shortcuts-row">
+            <span>SHIFT + TAB</span>
+            <span>Previous item</span>
+          </div>
+          <div class="shortcuts-row">
+            <span>ENTER</span>
+            <span>Activate item</span>
+          </div>
+          <div class="shortcuts-row">
+            <span>ESCAPE</span>
+            <span>Close panel</span>
+          </div>
+          <div class="shortcuts-row">
+            <span>ARROW KEY</span>
+            <span>Browse list</span>
+          </div>
+          <div class="shortcuts-row">
+            <span>CTRL + .</span>
+            <span>Toggle Reader</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accessibility-footer">
+      <button type="button" class="accessibility-close-btn">CLOSE</button>
+    </div>
+  </div>
+</body>
+</html>
