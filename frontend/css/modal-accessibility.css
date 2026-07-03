@@ -3,7 +3,7 @@
   width: 100%;
   min-width: 1093px;
   min-height: 756px;
-  background-color: #ffffff;
+  background-color: var(--color-surface);
   padding: 48px 56px 40px;
   font-family: var(--font-regular);
 }
@@ -19,12 +19,11 @@
   height: 46px;
   border: none;
   border-radius: 50%;
-  background-color: var(--color-accent, #d45038);
-  color: #ffffff;
+  background-color: var(--color-accent);
+  color: var(--color-surface);
   font-family: var(--font-regular);
   font-size: 24px;
   line-height: 1;
-  cursor: pointer;
 }
 
 .accessibility-title {

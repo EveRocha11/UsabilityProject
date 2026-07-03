@@ -6,7 +6,7 @@
   width: 100%;
   min-width: 940px;
   min-height: 660px;
-  background-color: #ffffff;
+  background-color: var(--color-surface);
 }
 
 .level-locked-content {
@@ -23,17 +23,16 @@
   font-weight: 700;
   font-size: 34px;
   line-height: 1.3;
-  color: var(--color-text-dark, #1c1916);
+  color: var(--color-text-dark);
 }
 
 .level-locked-btn {
   padding: 18px 56px;
   border: none;
   border-radius: 20px;
-  background-color: var(--color-purple, #7c3aed);
+  background-color: var(--color-purple);
   font-family: var(--font-bold);
   font-weight: 700;
   font-size: 18px;
-  color: #ffffff;
-  cursor: pointer;
+  color: var(--color-surface);
 }

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nivela - Perfil</title>
+  <link rel="stylesheet" href="../css/globals.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/perfil.css">
+</head>
+<body>
+  <div class="dashboard-page perfil-page">
+    <header class="dashboard-header">
+      <div class="brand">
+        <div class="brand-mark">N</div>
+        <span class="brand-name">Nivela</span>
+      </div>
+      <div class="header-actions">
+        <button type="button" class="header-btn">Aa</button>
+        <button type="button" class="header-btn header-btn-icon">◐</button>
+        <div class="avatar">A</div>
+      </div>
+    </header>
+
+    <div class="dashboard-body">
+      <aside class="sidebar">
+        <nav class="nav-list">
+          <a class="nav-item" href="dashboard.html">
+            <img class="nav-icon" src="../assets/img/icon-home.svg" alt="" />
+            <span>Home</span>
+          </a>
+          <a class="nav-item" href="challenges.html">
+            <img class="nav-icon" src="../assets/img/icon-sword.svg" alt="" />
+            <span>Challenges</span>
+          </a>
+          <a class="nav-item" href="units.html">
+            <img class="nav-icon" src="../assets/img/icon-path.svg" alt="" />
+            <span>Units</span>
+          </a>
+          <a class="nav-item is-active" href="#">
+            <img class="nav-icon" src="../assets/img/icon-person.svg" alt="" />
+            <span>Accesibility</span>
+          </a>
+        </nav>
+
+        <a class="nav-item nav-footer-item" href="#">
+          <img class="help-icon" src="../assets/img/icon-help.svg" alt="" />
+          <span>Help</span>
+        </a>
+      </aside>
+
+      <main class="main-content perfil-main">
+        <h1 class="perfil-title">User profile</h1>
+
+        <section class="profile-photo-panel" aria-label="Profile photo">
+          <div class="profile-photo-frame">
+            <img class="profile-photo" src="../assets/img/icon-avatar-placeholder.svg" alt="User profile photo" />
+          </div>
+        </section>
+
+        <section class="profile-card" aria-label="Profile details">
+          <button type="button" class="profile-edit-btn" aria-label="Edit profile">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M3 17.25V21h3.75L18.81 8.94l-3.75-3.75L3 17.25zm2.92 2.83H5v-.92l9.06-9.06.92.92L5.92 20.08zM20.71 7.04a1 1 0 0 0 0-1.42L18.38 3.29a1 1 0 0 0-1.42 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+            </svg>
+          </button>
+
+          <div class="profile-form">
+            <div class="profile-field-row">
+              <div class="profile-label">NAME</div>
+              <div class="profile-input">
+                <input type="text" value="Ana" readonly aria-label="Name" />
+              </div>
+            </div>
+
+            <div class="profile-field-row" readonly>
+              <div class="profile-label">EMAIL</div>
+              <div class="profile-input">
+                <input type="email" value="ana@gmail.com" readonly aria-label="Email" />
+              </div>
+            </div>
+
+            <div class="profile-field-row">
+              <div class="profile-label">PASSWORD</div>
+              <div class="profile-input profile-password-input">
+                <input type="password" value="password" readonly aria-label="Password" />
+                <button type="button" class="profile-password-toggle" aria-label="Show or hide password">
+                  <img src="../assets/img/eye-slash.svg" alt="" />
+                </button>
+              </div>
+            </div>
+
+            <div class="profile-actions">
+              <button type="button" class="profile-action-primary">CONFIRM</button>
+              <button type="button" class="profile-action-secondary">CANCEL</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="profile-stats-row" aria-label="Profile stats">
+          <article class="current-unit-card">
+            <div class="current-unit-header">
+              <img class="current-unit-icon" src="../assets/img/icon-lightning.svg" alt="" />
+              <div class="current-unit-copy">
+                <div class="current-unit-title-row">
+                  <h2 class="current-unit-title">Current Unit</h2>
+                  <span class="current-unit-index">2</span>
+                </div>
+                <div class="current-unit-scale">
+                  <span>U1</span>
+                  <div class="progress-track current-unit-track">
+                    <div class="progress-fill" style="width: 58%"></div>
+                  </div>
+                  <span>U2</span>
+                </div>
+              </div>
+            </div>
+            <div class="current-unit-action">
+              <button type="button" class="btn-purple current-unit-start">START</button>
+            </div>
+          </article>
+
+          <article class="score-card">
+            <h2 class="score-title">Total Score</h2>
+            <img class="score-icon" src="../assets/img/icon-star.svg" alt="" />
+            <div class="score-value">2450 P</div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </div>
+</body>
+</html>

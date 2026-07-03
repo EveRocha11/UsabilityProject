@@ -161,10 +161,9 @@
   align-items: center;
   gap: 14px;
   padding: 10px 28px 10px 10px;
-  border: 1.5px solid #c4b5fd;
+  border: 1.5px solid var(--color-purple-soft);
   border-radius: 16px;
   background-color: var(--color-level-bg);
-  cursor: pointer;
 }
 
 .lesson-speak-btn-icon {
@@ -221,7 +220,7 @@
   gap: 20px;
   margin-top: 12px;
   padding: 20px 24px;
-  border: 1.5px solid #ddd6fe;
+  border: 1.5px solid var(--color-border-soft);
   border-radius: 16px;
   background-color: var(--color-level-bg);
 }

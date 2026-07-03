@@ -3,7 +3,7 @@
   width: 100%;
   min-width: 940px;
   min-height: 660px;
-  background-color: #ffffff;
+  background-color: var(--color-surface);
 }
 
 .exit-modal-close {
@@ -17,12 +17,11 @@
   height: 48px;
   border: none;
   border-radius: 50%;
-  background-color: var(--color-accent, #d45038);
-  color: #ffffff;
+  background-color: var(--color-accent);
+  color: var(--color-surface);
   font-family: var(--font-regular);
   font-size: 26px;
   line-height: 1;
-  cursor: pointer;
 }
 
 .exit-modal-content {
@@ -40,7 +39,7 @@
   font-size: 28px;
   line-height: 1.3;
   text-align: center;
-  color: var(--color-text-dark, #1c1916);
+  color: var(--color-text-dark);
 }
 
 .exit-modal-actions {
@@ -56,14 +55,13 @@
   font-family: var(--font-bold);
   font-weight: 700;
   font-size: 15px;
-  color: #ffffff;
-  cursor: pointer;
+  color: var(--color-surface);
 }
 
 .exit-modal-btn-confirm {
-  background-color: #84cc16;
+  background-color: var(--color-success);
 }
 
 .exit-modal-btn-cancel {
-  background-color: var(--color-accent, #d45038);
+  background-color: var(--color-accent);
 }
