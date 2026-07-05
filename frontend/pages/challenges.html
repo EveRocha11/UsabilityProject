@@ -19,7 +19,7 @@
       <div class="header-actions">
         <button type="button" class="header-btn">Aa</button>
         <button type="button" class="header-btn header-btn-icon">◐</button>
-        <div class="avatar">A</div>
+        <div class="avatar" id="header-avatar">A</div>
       </div>
     </header>
 
@@ -43,7 +43,6 @@
             <span>Accesibility</span>
           </a>
         </nav>
-
         <a class="nav-item nav-footer-item" href="#">
           <img class="help-icon" src="../assets/img/icon-help.svg" alt="" />
           <span>Help</span>
@@ -54,109 +53,178 @@
         <div class="challenges-hero">
           <h1>Challenge yourself and earn rewards!</h1>
           <div class="challenges-hero-actions">
-            <button type="button" class="btn-success btn-pill">DAILY</button>
-            <button type="button" class="btn-success btn-pill">WEEKLY</button>
+            <button type="button" class="btn-success btn-pill challenge-tab is-tab-active" id="tab-daily">DAILY</button>
+            <button type="button" class="btn-success btn-pill challenge-tab" id="tab-weekly">WEEKLY</button>
           </div>
         </div>
 
-        <h2 class="section-title section-title-caps">Daily challenge</h2>
+        <!-- ── DAILY SECTION ─────────────────────────────── -->
+        <div id="daily-section">
+          <h2 class="section-title section-title-caps">Daily challenge</h2>
 
-        <div class="daily-challenge-card">
-          <div class="daily-challenge-icon-box">
-            <img src="../assets/img/icon-lightning.svg" alt="" />
-          </div>
-          <div class="daily-challenge-text">
-            <p class="daily-challenge-title">Complete lessons in the shortest possible time</p>
-            <p class="daily-challenge-meta">5 lessons · ~ 30 min</p>
-          </div>
-          <div class="daily-challenge-right">
-            <div class="daily-challenge-progress-row">
-              <div class="progress-track daily-challenge-progress-track">
-                <div class="progress-fill" style="width: 80%"></div>
-              </div>
-              <span class="daily-challenge-fraction">4 / 5</span>
+          <div class="daily-challenge-card">
+            <div class="daily-challenge-icon-box">
+              <img src="../assets/img/icon-lightning.svg" alt="" />
             </div>
-            <button type="button" class="btn-purple">START</button>
+            <div class="daily-challenge-text">
+              <p class="daily-challenge-title">Complete lessons in the shortest possible time</p>
+              <p class="daily-challenge-meta">5 lessons · ~ 30 min</p>
+            </div>
+            <div class="daily-challenge-right">
+              <div class="daily-challenge-progress-row">
+                <div class="progress-track daily-challenge-progress-track">
+                  <div class="progress-fill" style="width: 0%"></div>
+                </div>
+                <span class="daily-challenge-fraction">0 / 5</span>
+              </div>
+              <button type="button" class="btn-purple">START</button>
+            </div>
+          </div>
+
+          <h2 class="section-title section-title-caps">More challenges</h2>
+
+          <div class="challenges-grid">
+            <div class="challenge-grid-card">
+              <div class="challenge-grid-top">
+                <div class="challenge-grid-icon-box">
+                  <img src="../assets/img/icon-book.svg" alt="" />
+                </div>
+                <div class="challenge-grid-text">
+                  <p class="challenge-grid-title">Get a score of 80% or higher in 2 lessons</p>
+                  <div class="progress-track challenge-grid-progress-track">
+                    <div class="progress-fill" style="width: 0%"></div>
+                  </div>
+                  <p class="challenge-grid-meta">5 lessons · ~ 30 min</p>
+                </div>
+              </div>
+              <div class="challenge-grid-footer">
+                <button type="button" class="btn-success btn-small">START</button>
+              </div>
+            </div>
+
+            <div class="challenge-grid-card">
+              <div class="challenge-grid-top">
+                <div class="challenge-grid-icon-box">
+                  <img src="../assets/img/icon-target.svg" alt="" />
+                </div>
+                <div class="challenge-grid-text">
+                  <p class="challenge-grid-title">Get 5 correct answers in a row in 2 lessons</p>
+                  <div class="progress-track challenge-grid-progress-track">
+                    <div class="progress-fill" style="width: 0%"></div>
+                  </div>
+                  <p class="challenge-grid-meta">5 lessons · ~ 30 min</p>
+                </div>
+              </div>
+              <div class="challenge-grid-footer">
+                <button type="button" class="btn-success btn-small">START</button>
+              </div>
+            </div>
+
+            <div class="challenge-grid-card">
+              <div class="challenge-grid-top">
+                <div class="challenge-grid-icon-box">
+                  <img src="../assets/img/icon-lightning.svg" alt="" />
+                </div>
+                <div class="challenge-grid-text">
+                  <p class="challenge-grid-title">Complete 3 lessons in less than 1 hour</p>
+                  <div class="progress-track challenge-grid-progress-track">
+                    <div class="progress-fill" style="width: 0%"></div>
+                  </div>
+                  <p class="challenge-grid-meta">5 lessons · ~ 30 min</p>
+                </div>
+              </div>
+              <div class="challenge-grid-footer">
+                <button type="button" class="btn-success btn-small">START</button>
+              </div>
+            </div>
+
+            <div class="challenge-grid-card">
+              <div class="challenge-grid-top">
+                <div class="challenge-grid-icon-box">
+                  <img src="../assets/img/icon-star.svg" alt="" />
+                </div>
+                <div class="challenge-grid-text">
+                  <p class="challenge-grid-title">Complete a lesson with a perfect score</p>
+                  <div class="progress-track challenge-grid-progress-track">
+                    <div class="progress-fill" style="width: 0%"></div>
+                  </div>
+                  <p class="challenge-grid-meta">5 lessons · ~ 30 min</p>
+                </div>
+              </div>
+              <div class="challenge-grid-footer">
+                <button type="button" class="btn-success btn-small">START</button>
+              </div>
+            </div>
           </div>
         </div>
 
-        <h2 class="section-title section-title-caps">More challenges</h2>
+        <!-- ── WEEKLY SECTION ─────────────────────────────── -->
+        <div id="weekly-section" style="display:none">
+          <h2 class="section-title section-title-caps">Weekly challenge</h2>
 
-        <div class="challenges-grid">
-          <div class="challenge-grid-card">
-            <div class="challenge-grid-top">
-              <div class="challenge-grid-icon-box">
-                <img src="../assets/img/icon-book.svg" alt="" />
-              </div>
-              <div class="challenge-grid-text">
-                <p class="challenge-grid-title">Get a score of 80% or higher in 2 lessons</p>
-                <div class="progress-track challenge-grid-progress-track">
-                  <div class="progress-fill" style="width: 35%"></div>
-                </div>
-                <p class="challenge-grid-meta">5 lessons · ~ 30 min</p>
-              </div>
+          <div class="daily-challenge-card" id="weekly-featured-card">
+            <div class="daily-challenge-icon-box">
+              <img src="../assets/img/icon-path.svg" alt="" id="weekly-featured-icon" />
             </div>
-            <div class="challenge-grid-footer">
-              <button type="button" class="btn-success btn-small">START</button>
+            <div class="daily-challenge-text">
+              <p class="daily-challenge-title" id="weekly-featured-title">Weekly challenge</p>
+              <p class="daily-challenge-meta" id="weekly-featured-meta">3 levels · ~ 1.5 hrs</p>
+            </div>
+            <div class="daily-challenge-right">
+              <div class="daily-challenge-progress-row">
+                <div class="progress-track daily-challenge-progress-track">
+                  <div class="progress-fill" id="weekly-featured-fill" style="width: 0%"></div>
+                </div>
+                <span class="daily-challenge-fraction" id="weekly-featured-fraction">0 / 3</span>
+              </div>
+              <button type="button" class="btn-purple" id="weekly-featured-btn">START</button>
             </div>
           </div>
 
-          <div class="challenge-grid-card">
-            <div class="challenge-grid-top">
-              <div class="challenge-grid-icon-box">
-                <img src="../assets/img/icon-target.svg" alt="" />
-              </div>
-              <div class="challenge-grid-text">
-                <p class="challenge-grid-title">Get 5 correct answers in a row in 2 lessons</p>
-                <div class="progress-track challenge-grid-progress-track">
-                  <div class="progress-fill" style="width: 85%"></div>
-                </div>
-                <p class="challenge-grid-meta">5 lessons · ~ 30 min</p>
-              </div>
-            </div>
-            <div class="challenge-grid-footer">
-              <button type="button" class="btn-success btn-small">START</button>
-            </div>
-          </div>
+          <h2 class="section-title section-title-caps">More weekly challenges</h2>
 
-          <div class="challenge-grid-card">
-            <div class="challenge-grid-top">
-              <div class="challenge-grid-icon-box">
-                <img src="../assets/img/icon-lightning.svg" alt="" />
-              </div>
-              <div class="challenge-grid-text">
-                <p class="challenge-grid-title">Complete 3 lessons in less than 1 hour</p>
-                <div class="progress-track challenge-grid-progress-track">
-                  <div class="progress-fill" style="width: 70%"></div>
+          <div class="challenges-grid challenges-grid-2col">
+            <div class="challenge-grid-card" id="weekly-grid-0">
+              <div class="challenge-grid-top">
+                <div class="challenge-grid-icon-box">
+                  <img src="../assets/img/icon-trophy.svg" alt="" />
                 </div>
-                <p class="challenge-grid-meta">5 lessons · ~ 30 min</p>
+                <div class="challenge-grid-text">
+                  <p class="challenge-grid-title">Earn 50 or more points this week</p>
+                  <div class="progress-track challenge-grid-progress-track">
+                    <div class="progress-fill" style="width: 0%"></div>
+                  </div>
+                  <p class="challenge-grid-meta">All levels · ongoing</p>
+                </div>
+              </div>
+              <div class="challenge-grid-footer">
+                <button type="button" class="btn-success btn-small">START</button>
               </div>
             </div>
-            <div class="challenge-grid-footer">
-              <button type="button" class="btn-success btn-small">START</button>
-            </div>
-          </div>
 
-          <div class="challenge-grid-card">
-            <div class="challenge-grid-top">
-              <div class="challenge-grid-icon-box">
-                <img src="../assets/img/icon-star.svg" alt="" />
-              </div>
-              <div class="challenge-grid-text">
-                <p class="challenge-grid-title">Complete a lesson with a perfect score</p>
-                <div class="progress-track challenge-grid-progress-track">
-                  <div class="progress-fill" style="width: 25%"></div>
+            <div class="challenge-grid-card" id="weekly-grid-1">
+              <div class="challenge-grid-top">
+                <div class="challenge-grid-icon-box">
+                  <img src="../assets/img/icon-lightning.svg" alt="" />
                 </div>
-                <p class="challenge-grid-meta">5 lessons · ~ 30 min</p>
+                <div class="challenge-grid-text">
+                  <p class="challenge-grid-title">Maintain a 5-day consecutive learning streak</p>
+                  <div class="progress-track challenge-grid-progress-track">
+                    <div class="progress-fill" style="width: 0%"></div>
+                  </div>
+                  <p class="challenge-grid-meta">Daily · ~ 5 days</p>
+                </div>
               </div>
-            </div>
-            <div class="challenge-grid-footer">
-              <button type="button" class="btn-success btn-small">START</button>
+              <div class="challenge-grid-footer">
+                <button type="button" class="btn-success btn-small">START</button>
+              </div>
             </div>
           </div>
         </div>
+
       </main>
     </div>
   </div>
+  <script src="../js/challenges.js"></script>
 </body>
 </html>

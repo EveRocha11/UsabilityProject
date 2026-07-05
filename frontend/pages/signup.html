@@ -15,40 +15,61 @@
       <p class="text-secondary signup-subtitle">Sign up for free</p>
 
       <p class="text-step-label step-label">Personal information</p>
-      <p class="link-accent step-indicator">Step 1 of 3</p>
-
-      <div class="progress-track progress-track-1 is-active"></div>
-      <div class="progress-track progress-track-2"></div>
-      <div class="progress-track progress-track-3"></div>
 
       <div class="field-label label-name">Name</div>
-      <div class="field-input input-name">
-        <div class="field-placeholder">Ana</div>
+      <div class="field-input input-name" id="wrap-name">
+        <input type="text" id="signup-name" placeholder="Ana" autocomplete="given-name" aria-label="Name" />
       </div>
+      <span class="field-msg" id="err-name"></span>
 
       <div class="field-label label-lastname">Lastname</div>
-      <div class="field-input input-lastname">
-        <div class="field-placeholder">García</div>
+      <div class="field-input input-lastname" id="wrap-lastname">
+        <input type="text" id="signup-lastname" placeholder="García" autocomplete="family-name" aria-label="Lastname" />
       </div>
+      <span class="field-msg" id="err-lastname"></span>
 
       <div class="field-label label-email">Email</div>
-      <div class="field-input input-email">
-        <div class="field-placeholder">tu@email.com</div>
+      <div class="field-input input-email" id="wrap-email">
+        <input type="email" id="signup-email" placeholder="tu@email.com" autocomplete="email" aria-label="Email" />
       </div>
+      <span class="field-msg" id="err-email"></span>
 
       <div class="field-label label-password">Password</div>
-      <div class="field-input input-password">
-        <div class="field-placeholder">••••••••</div>
+      <div class="field-input input-password" id="wrap-password">
+        <input type="password" id="signup-password" placeholder="••••••••" autocomplete="new-password" aria-label="Password" />
+        <button type="button" class="eye-icon" id="toggle-password" aria-label="Show/hide password">
+          <svg class="eye-open" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#78726d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <svg class="eye-closed" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#78726d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+            <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+            <line x1="1" y1="1" x2="23" y2="23"/>
+          </svg>
+        </button>
       </div>
-      <p class="field-hint hint">Minimum 8 characters, one uppercase letter, and one number</p>
+      <p class="field-hint hint" id="password-hint">Minimum 8 characters, one uppercase letter, and one number</p>
 
       <div class="field-label label-confirm-password">Confirm Password</div>
-      <div class="field-input input-confirm-password">
-        <div class="field-placeholder">••••••••</div>
+      <div class="field-input input-confirm-password" id="wrap-confirm">
+        <input type="password" id="signup-confirm" placeholder="••••••••" autocomplete="new-password" aria-label="Confirm Password" />
+        <button type="button" class="eye-icon" id="toggle-confirm" aria-label="Show/hide password">
+          <svg class="eye-open" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#78726d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+            <circle cx="12" cy="12" r="3"/>
+          </svg>
+          <svg class="eye-closed" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#78726d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+            <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+            <line x1="1" y1="1" x2="23" y2="23"/>
+          </svg>
+        </button>
       </div>
+      <span class="field-msg" id="err-confirm"></span>
 
       <button type="button" class="btn-primary cta-continue"><span>Continue →</span></button>
     </div>
   </div>
+
+  <script src="../js/signup.js"></script>
 </body>
 </html>

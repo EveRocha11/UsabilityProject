@@ -19,18 +19,18 @@
       <div class="header-actions">
         <button type="button" class="header-btn">Aa</button>
         <button type="button" class="header-btn header-btn-icon">◐</button>
-        <div class="avatar">A</div>
+        <div class="avatar" id="header-avatar">A</div>
       </div>
     </header>
 
     <div class="dashboard-body">
       <aside class="sidebar">
         <nav class="nav-list">
-          <a class="nav-item" href="dashboard.html">
+          <a class="nav-item is-active" href="dashboard.html">
             <img class="nav-icon" src="../assets/img/icon-home.svg" alt="" />
             <span>Home</span>
           </a>
-          <a class="nav-item is-active" href="challenges.html">
+          <a class="nav-item" href="challenges.html">
             <img class="nav-icon" src="../assets/img/icon-sword.svg" alt="" />
             <span>Challenges</span>
           </a>
@@ -52,11 +52,11 @@
 
       <main class="main-content lesson-main">
         <div class="lesson-top-bar">
-          <button type="button" class="lesson-close" aria-label="Close">
+          <button type="button" class="lesson-close" id="close-btn" aria-label="Close">
             <img src="../assets/img/icon-close.svg" alt="" />
           </button>
           <div class="progress-track lesson-progress-track">
-            <div class="progress-fill" style="width: 55%"></div>
+            <div class="progress-fill" id="lesson-progress-fill" style="width: 0%"></div>
           </div>
           <div class="lesson-hearts">
             <img src="../assets/img/icon-heart.svg" alt="" />
@@ -94,26 +94,42 @@
 
             <div class="lesson-sentence-col">
               <div class="lesson-sentence-row">
-                <img class="lesson-speaker-icon" src="../assets/img/icon-speaker.svg" alt="Escuchar" />
-                <div class="lesson-sentence-bubble">Her first name is Anna, nice too met you.</div>
+                <img class="lesson-speaker-icon" id="speaker-icon" src="../assets/img/icon-speaker.svg" alt="Escuchar" />
+                <div class="lesson-sentence-bubble" id="sentence-bubble">Her first name is Anna, nice to meet you.</div>
               </div>
 
-              <button type="button" class="lesson-speak-btn">
+              <button type="button" class="lesson-speak-btn" id="speak-btn">
                 <span class="lesson-speak-btn-icon">
                   <img src="../assets/img/icon-mic.svg" alt="" />
                 </span>
-                <span>CLICK TO SPEAK</span>
+                <span id="speak-label">CLICK TO SPEAK</span>
               </button>
             </div>
           </div>
         </div>
 
-        <div class="lesson-bottom-bar">
-          <button type="button" class="btn-purple lesson-skip-btn">I CAN'T SPEAK RIGHT NOW</button>
-          <button type="button" class="btn-success">CHECK</button>
+        <!-- Bottom bar: shown during exercise -->
+        <div class="lesson-bottom-bar" id="bottom-bar">
+          <button type="button" class="btn-purple lesson-skip-btn" id="skip-btn">I CAN'T SPEAK RIGHT NOW</button>
+          <button type="button" class="btn-success" id="check-btn" disabled>CHECK</button>
+        </div>
+
+        <!-- Feedback section: hidden until CHECK or SKIP -->
+        <div id="feedback-section" class="lesson-feedback-section" style="display:none">
+          <p class="lesson-feedback-label" id="feedback-label">Feedback</p>
+          <div class="lesson-feedback-card" id="feedback-card">
+            <img class="lesson-feedback-icon" id="feedback-icon" src="../assets/img/icon-check-circle.svg" alt="" />
+            <div class="lesson-feedback-text">
+              <p class="lesson-feedback-title" id="feedback-title">Great job, you did well</p>
+              <p class="lesson-feedback-subtitle" id="feedback-subtitle">Keep going</p>
+            </div>
+            <button type="button" class="btn-success" id="continue-btn">CONTINUE</button>
+          </div>
         </div>
       </main>
     </div>
   </div>
+
+  <script src="../js/lesson.js"></script>
 </body>
 </html>

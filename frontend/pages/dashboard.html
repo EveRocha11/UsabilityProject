@@ -122,21 +122,42 @@
 
         <h2 class="section-title">Daily challenge</h2>
 
-        <div class="challenge-card">
+        <div class="challenge-card" id="daily-challenge-card">
           <div class="challenge-icon-box">
-            <img src="../assets/img/icon-book.svg" alt="" />
+            <img src="../assets/img/icon-book.svg" id="challenge-icon" alt="" />
           </div>
           <div class="challenge-body">
-            <p class="challenge-text">Get a score of 80% or higher in 2 lessons</p>
+            <p class="challenge-complete-badge" id="challenge-complete-badge" style="display:none">✓ Challenge complete!</p>
+            <p class="challenge-text" id="challenge-text">Get a score of 80% or higher in 2 lessons</p>
             <div class="progress-track challenge-progress-track">
-              <div class="progress-fill challenge-progress-fill" style="width: 40%"></div>
+              <div class="progress-fill challenge-progress-fill"></div>
             </div>
-            <div class="challenge-meta">3 lessons · ~ 30 min</div>
+            <div class="challenge-meta" id="challenge-meta">3 lessons · ~ 30 min</div>
           </div>
-          <button type="button" class="btn-success">START</button>
+          <button type="button" class="btn-success" id="daily-challenge-start">START</button>
+        </div>
+
+        <h2 class="section-title">Weekly challenge</h2>
+
+        <div class="challenge-card" id="weekly-challenge-card">
+          <div class="challenge-icon-box">
+            <img src="../assets/img/icon-path.svg" id="weekly-challenge-icon" alt="" />
+          </div>
+          <div class="challenge-body">
+            <p class="challenge-complete-badge" id="weekly-complete-badge" style="display:none">✓ All weekly done!</p>
+            <p class="challenge-text" id="weekly-challenge-text">Complete all 3 levels in Block 1</p>
+            <div class="progress-track challenge-progress-track">
+              <div class="progress-fill challenge-progress-fill" id="weekly-progress-fill"></div>
+            </div>
+            <div class="challenge-meta" id="weekly-challenge-meta">3 levels · ~ 1.5 hrs</div>
+          </div>
+          <button type="button" class="btn-purple" id="weekly-challenge-start">START</button>
         </div>
       </main>
     </div>
   </div>
+  <div id="locked-toast" class="locked-toast">Complete the previous level to unlock this one</div>
+
+  <script src="../js/dashboard.js"></script>
 </body>
 </html>

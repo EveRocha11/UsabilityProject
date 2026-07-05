@@ -117,3 +117,19 @@
   width: 388px;
   height: 52px;
 }
+
+/* Error message spans — positioned below each field */
+#err-name     { top: 200px; left: 36px; }
+#err-lastname { top: 200px; left: 242px; }
+#err-email    { top: 286px; left: 36px; }
+#err-confirm  { top: 478px; left: 36px; }
+
+/* Eye icon inside password fields (388px wide × 48px tall field) */
+.signup-card .eye-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+}

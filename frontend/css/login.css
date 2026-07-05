@@ -44,25 +44,12 @@
 
 .login-card .eye-icon {
   position: absolute;
-  left: 329.5px;
-  top: 11.5px;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
   width: 24px;
   height: 24px;
 }
-
-.login-card .eye-icon .eye-vector {
-  position: absolute;
-}
-
-.login-card .eye-icon .eye-vector img {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.login-card .eye-icon .eye-vector-01 { inset: 13.62% 9.37% 13.46% 13.46%; }
-.login-card .eye-icon .eye-vector-02 { inset: 21.88% 36.98% 32.96% 9.38%; }
-.login-card .eye-icon .eye-vector-03 { inset: 34.38% 47.7% 47.7% 34.37%; }
 
 .login-card .hint {
   top: 352px;
@@ -73,7 +60,7 @@
   top: 367px;
   left: 240px;
   font-size: 13px;
-  text-decoration: underline;
+  text-decoration: none;
   cursor: pointer;
 }
 
@@ -88,6 +75,12 @@
   top: 470px;
   left: 128px;
   font-size: 13px;
+}
+
+.login-card .sign-up-link a {
+  color: var(--color-purple);
+  font-family: var(--font-semibold);
+  font-weight: 600;
 }
 
 

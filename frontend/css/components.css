@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* Design tokens and shared UI pieces reused across screens (login, sign up, ...).
    Page-specific files (e.g. login.css, signup.css) only hold positions/sizes. */
 
@@ -70,7 +69,21 @@ body {
   background-color: var(--color-input-bg);
   border: 1.5px solid var(--color-input-border);
   border-radius: var(--radius-input);
-  overflow: hidden;
+  /* overflow visible so error message can appear below the field */
+}
+
+/* Per-field error message span */
+.field-msg {
+  position: absolute;
+  font-family: var(--font-regular);
+  font-size: 11px;
+  color: #ef4444;
+  white-space: nowrap;
+  display: none;
+}
+
+.field-msg.visible {
+  display: block;
 }
 
 .field-placeholder {
@@ -139,6 +152,49 @@ body {
   color: #ffffff;
   white-space: nowrap;
 }
-=======
-/* Shared component styles moved to globals.css. */
->>>>>>> a8d71893f0201a268612695fe5052af3d3dae6f5
+
+/* Real <input> elements inside .field-input containers */
+.field-input input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: transparent;
+  padding: 0 14px;
+  font-family: var(--font-regular);
+  font-size: 14px;
+  color: var(--color-text-dark);
+  outline: none;
+  box-sizing: border-box;
+}
+
+.field-input input::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* Password fields: extra right padding so text doesn't overlap eye icon */
+.input-password input,
+.input-confirm-password input {
+  padding-right: 48px;
+}
+
+/* Button brightens when all required fields are filled */
+.btn-primary.is-active {
+  background-color: var(--color-purple);
+  transition: background-color 0.2s;
+}
+
+/* Error state */
+.field-input.is-error {
+  border-color: #ef4444 !important;
+}
+
+.eye-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+}

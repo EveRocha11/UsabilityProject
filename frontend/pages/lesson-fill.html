@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8" />
+  <title>Nivela - Fill in the blank</title>
+  <link rel="stylesheet" href="../css/globals.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/dashboard.css">
+  <link rel="stylesheet" href="../css/lesson.css">
+</head>
+<body>
+  <div class="dashboard-page">
+    <header class="dashboard-header">
+      <div class="brand">
+        <div class="brand-mark">N</div>
+        <span class="brand-name">Nivela</span>
+      </div>
+      <div class="header-actions">
+        <button type="button" class="header-btn">Aa</button>
+        <button type="button" class="header-btn header-btn-icon">◐</button>
+        <div class="avatar" id="header-avatar">A</div>
+      </div>
+    </header>
+
+    <div class="dashboard-body">
+      <aside class="sidebar">
+        <nav class="nav-list">
+          <a class="nav-item is-active" href="dashboard.html">
+            <img class="nav-icon" src="../assets/img/icon-home.svg" alt="" />
+            <span>Home</span>
+          </a>
+          <a class="nav-item" href="challenges.html">
+            <img class="nav-icon" src="../assets/img/icon-sword.svg" alt="" />
+            <span>Challenges</span>
+          </a>
+          <a class="nav-item" href="units.html">
+            <img class="nav-icon" src="../assets/img/icon-path.svg" alt="" />
+            <span>Units</span>
+          </a>
+          <a class="nav-item" href="modal-accessibility.html">
+            <img class="nav-icon" src="../assets/img/icon-person.svg" alt="" />
+            <span>Accesibility</span>
+          </a>
+        </nav>
+        <a class="nav-item nav-footer-item" href="#">
+          <img class="help-icon" src="../assets/img/icon-help.svg" alt="" />
+          <span>Help</span>
+        </a>
+      </aside>
+
+      <main class="main-content lesson-main">
+        <div class="lesson-top-bar">
+          <button type="button" class="lesson-close" id="close-btn" aria-label="Close">
+            <img src="../assets/img/icon-close.svg" alt="" />
+          </button>
+          <div class="progress-track lesson-progress-track">
+            <div class="progress-fill" id="lesson-progress-fill" style="width: 33%"></div>
+          </div>
+          <div class="lesson-hearts">
+            <img src="../assets/img/icon-heart.svg" alt="" />
+            <span>5</span>
+          </div>
+        </div>
+
+        <!-- Step badge -->
+        <p class="lesson-step-badge">Exercise 2 of 3 — Fill in the blank</p>
+
+        <!-- Fill exercise -->
+        <div class="lesson-exercise fill-exercise">
+          <div class="fill-header">
+            <p class="lesson-instruction" id="fill-instruction">Look at the image and complete each sentence.</p>
+            <span class="fill-counter" id="fill-counter">1 / 4</span>
+          </div>
+
+          <!-- Visual description card (accessible) -->
+          <div class="fill-image-card" id="fill-image-card">
+            <span class="fill-image-label">Visual context</span>
+            <p class="fill-image-desc" id="fill-image-desc"></p>
+          </div>
+
+          <!-- Sentence with blank -->
+          <div class="fill-sentence" id="fill-sentence" aria-live="polite">
+            <span id="fill-before"></span>
+            <span class="fill-blank" id="fill-blank">_______</span>
+            <span id="fill-after"></span>
+          </div>
+
+          <!-- Answer options -->
+          <fieldset class="fill-options" id="fill-options">
+            <legend class="sr-only">Answer choices</legend>
+          </fieldset>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="lesson-bottom-bar" id="bottom-bar">
+          <button type="button" class="btn-purple lesson-skip-btn" id="skip-btn">SKIP</button>
+          <button type="button" class="btn-success" id="check-btn" disabled>CHECK</button>
+        </div>
+
+        <!-- Feedback section -->
+        <div id="feedback-section" class="lesson-feedback-section" style="display:none">
+          <p class="lesson-feedback-label" id="feedback-label">Feedback</p>
+          <div class="lesson-feedback-card" id="feedback-card">
+            <img class="lesson-feedback-icon" id="feedback-icon" src="../assets/img/icon-check-circle.svg" alt="" />
+            <div class="lesson-feedback-text">
+              <p class="lesson-feedback-title" id="feedback-title">Correct!</p>
+              <p class="lesson-feedback-subtitle" id="feedback-subtitle">Keep going</p>
+            </div>
+            <button type="button" class="btn-success" id="next-btn">NEXT</button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../js/exercises-data.js"></script>
+  <script src="../js/lesson-fill.js"></script>
+</body>
+</html>

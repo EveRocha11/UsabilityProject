@@ -173,3 +173,53 @@
   padding: 8px 20px;
   font-size: 12px;
 }
+
+/* Completed states */
+.daily-challenge-card.is-complete {
+  border-color: var(--color-success);
+  background-color: #f0fdf4;
+}
+
+.challenge-grid-card.is-complete {
+  border-color: var(--color-success);
+  background-color: #f0fdf4;
+}
+
+.challenge-grid-card.is-complete .challenge-grid-title {
+  color: var(--color-text-muted);
+}
+
+.challenge-grid-card.is-complete .challenge-grid-progress-track .progress-fill {
+  background-color: var(--color-success);
+}
+
+.daily-challenge-card.is-complete .progress-fill {
+  background-color: var(--color-success);
+}
+
+.daily-challenge-card.is-complete .daily-challenge-fraction {
+  color: #16a34a;
+}
+
+/* Tab buttons: DAILY / WEEKLY */
+.challenge-tab {
+  border: 1.5px solid rgba(255,255,255,0.5);
+  opacity: 0.7;
+  transition: opacity 0.15s, background-color 0.15s, border-color 0.15s;
+}
+
+.challenge-tab:hover {
+  opacity: 0.9;
+}
+
+.challenge-tab.is-tab-active {
+  background-color: #ffffff;
+  color: var(--color-success);
+  border-color: #ffffff;
+  opacity: 1;
+}
+
+/* Weekly grid: 2 equal columns */
+.challenges-grid-2col {
+  grid-template-columns: 1fr 1fr;
+}
