@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta charset="utf-8" />
-  <title>Nivela - Unit 1 (U1)</title>
+  <title>Nivela - Unit</title>
   <link rel="stylesheet" href="../css/globals.css">
   <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/dashboard.css">
@@ -11,102 +11,85 @@
 </head>
 <body>
   <div class="dashboard-page">
-    <header class="dashboard-header">
-      <div class="brand">
-        <div class="brand-mark">N</div>
+
+    <header class="dashboard-header" role="banner">
+      <div class="brand" aria-label="Nivela">
+        <div class="brand-mark" aria-hidden="true">N</div>
         <span class="brand-name">Nivela</span>
       </div>
       <div class="header-actions">
-        <button type="button" class="header-btn">Aa</button>
-        <button type="button" class="header-btn header-btn-icon">◐</button>
-        <div class="avatar">A</div>
+        <button type="button" class="header-btn" aria-label="Text size settings">Aa</button>
+        <button type="button" class="header-btn header-btn-icon" aria-label="Toggle dark mode">◐</button>
+        <div class="avatar" aria-live="polite" aria-label="User avatar">A</div>
       </div>
     </header>
 
     <div class="dashboard-body">
-      <aside class="sidebar">
-        <nav class="nav-list">
-          <a class="nav-item" href="dashboard.html">
-            <img class="nav-icon" src="../assets/img/icon-home.svg" alt="" />
+      <aside class="sidebar" aria-label="Main navigation">
+        <nav class="nav-list" role="navigation">
+          <a class="nav-item" href="dashboard.html" aria-label="Home">
+            <img class="nav-icon" src="../assets/img/icon-home.svg" alt="" aria-hidden="true" />
             <span>Home</span>
           </a>
-          <a class="nav-item" href="challenges.html">
-            <img class="nav-icon" src="../assets/img/icon-sword.svg" alt="" />
+          <a class="nav-item" href="challenges.html" aria-label="Challenges">
+            <img class="nav-icon" src="../assets/img/icon-sword.svg" alt="" aria-hidden="true" />
             <span>Challenges</span>
           </a>
-          <a class="nav-item is-active" href="units.html">
-            <img class="nav-icon" src="../assets/img/icon-path.svg" alt="" />
-            <span>Unit</span>
+          <a class="nav-item is-active" href="units.html" aria-current="page" aria-label="Units, current section">
+            <img class="nav-icon" src="../assets/img/icon-path.svg" alt="" aria-hidden="true" />
+            <span>Units</span>
           </a>
-          <a class="nav-item" href="modal-accessibility.html">
-            <img class="nav-icon" src="../assets/img/icon-person.svg" alt="" />
-            <span>Accesibility</span>
+          <a class="nav-item" href="modal-accessibility.html" aria-label="Accessibility settings">
+            <img class="nav-icon" src="../assets/img/icon-person.svg" alt="" aria-hidden="true" />
+            <span>Accessibility</span>
           </a>
         </nav>
 
-        <a class="nav-item nav-footer-item" href="#">
-          <img class="help-icon" src="../assets/img/icon-help.svg" alt="" />
+        <a class="nav-item nav-footer-item" href="#" aria-label="Help">
+          <img class="help-icon" src="../assets/img/icon-help.svg" alt="" aria-hidden="true" />
           <span>Help</span>
         </a>
       </aside>
 
-      <main class="main-content">
-        <div class="unit-banner">
-          <h1>UNIT 1 (U1)</h1>
+      <main class="main-content" id="main-content">
+
+        <!-- Banner: back button + title + optional padlock for locked units -->
+        <div class="unit-banner" role="region" aria-labelledby="unit-banner-title">
+          <a href="units.html" class="unit-back-btn" aria-label="Back to Units overview">
+            <span aria-hidden="true">&#8592;</span>
+            Back
+          </a>
+          <h1 id="unit-banner-title">Unit</h1>
+          <img id="unit-banner-lock"
+               class="unit-banner-lock"
+               src="../assets/img/icon-padlock.svg"
+               alt="This unit's lessons are locked"
+               style="display:none" />
         </div>
 
-        <h2 class="section-title">Grammar and Structures</h2>
-        <div class="grammar-card">
-          <div class="grammar-col">
-            <div class="grammar-item">
-              <h3>Present Perfect</h3>
-              <p>Use of <em>ever, never, already, yet</em> and <em>just</em> to talk about past experiences and recent events.</p>
-            </div>
-            <div class="grammar-item">
-              <h3>Past Simple</h3>
-              <p>Regular and irregular verbs in narrative contexts; use with <em>when</em> to introduce a completed action.</p>
-            </div>
+        <!-- Grammar section -->
+        <section aria-labelledby="grammar-heading">
+          <h2 id="grammar-heading" class="section-title">Grammar and Structures</h2>
+          <div class="grammar-card">
+            <ul id="grammar-list" class="grammar-list" aria-label="Grammar topics covered in this unit">
+              <!-- Populated by unit-detail.js -->
+            </ul>
           </div>
-          <div class="grammar-col">
-            <div class="grammar-item">
-              <h3>Past Continuous</h3>
-              <p>Actions in progress at a specific moment in the past; combined with <em>while</em> to show two simultaneous actions.</p>
-            </div>
-            <div class="grammar-item">
-              <h3>Time Expressions</h3>
-              <p><em>Since, for, just, yet, already</em> — how to choose the right expression depending on the tense and context.</p>
-            </div>
-          </div>
-        </div>
+        </section>
 
-        <h2 class="section-title">Lessons</h2>
-        <div class="lessons-row">
-          <div class="lesson-card">
-            <div class="lesson-icon-box">
-              <img src="../assets/img/icon-book.svg" alt="" />
-            </div>
-            <div class="lesson-card-title">Practice Present Perfect with <em>ever, never, already</em> and <em>yet</em> in real conversations.</div>
-            <button type="button" class="btn-success lesson-start-btn">START</button>
+        <!-- Lessons section -->
+        <section aria-labelledby="lessons-heading">
+          <h2 id="lessons-heading" class="section-title">Lessons</h2>
+          <div id="lessons-row" class="lessons-row" role="list" aria-label="Lessons in this unit">
+            <!-- Populated by unit-detail.js -->
           </div>
+        </section>
 
-          <div class="lesson-card">
-            <div class="lesson-icon-box">
-              <img src="../assets/img/icon-target.svg" alt="" />
-            </div>
-            <div class="lesson-card-title">Combine Past Simple and Present Perfect to describe life events and personal stories.</div>
-            <button type="button" class="btn-success lesson-start-btn">START</button>
-          </div>
-
-          <div class="lesson-card">
-            <div class="lesson-icon-box">
-              <img src="../assets/img/icon-star.svg" alt="" />
-            </div>
-            <div class="lesson-card-title">Use Past Continuous with <em>when</em> and <em>while</em> to narrate interrupted actions.</div>
-            <button type="button" class="btn-success lesson-start-btn">START</button>
-          </div>
-        </div>
       </main>
     </div>
   </div>
+
+  <script src="../js/units-data.js"></script>
+  <script src="../js/unit-detail.js"></script>
 </body>
 </html>

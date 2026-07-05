@@ -90,6 +90,10 @@
   background-color: var(--color-accent);
 }
 
+.unit-status-available {
+  background-color: var(--color-purple);
+}
+
 .unit-lock-icon {
   width: 22px;
   height: 22px;

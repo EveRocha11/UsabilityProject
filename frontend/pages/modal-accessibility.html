@@ -1,91 +1,137 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta charset="utf-8" />
-  <title>Nivela - Accesibility</title>
+  <title>Nivela - Accessibility</title>
   <link rel="stylesheet" href="../css/globals.css">
   <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/modal-accessibility.css">
 </head>
 <body>
-  <div class="accessibility-page">
-    <button type="button" class="accessibility-close" aria-label="Close">×</button>
 
-    <h1 class="accessibility-title">Accesibility</h1>
+  <div class="accessibility-page"
+       role="dialog"
+       aria-modal="true"
+       aria-labelledby="accessibility-title">
+
+    <!-- × close button -->
+    <button id="accessibility-x-btn"
+            type="button"
+            class="accessibility-close"
+            aria-label="Close accessibility settings">×</button>
+
+    <h1 id="accessibility-title" class="accessibility-title">Accessibility</h1>
 
     <div class="accessibility-grid">
-      <div class="accessibility-col">
-        <h2>Options</h2>
 
+      <!-- Left column: toggle options -->
+      <div class="accessibility-col">
+        <h2 id="options-heading">Options</h2>
+
+        <!-- Keyboard mode toggle -->
         <div class="option-card">
           <div class="option-card-info">
-            <img class="option-icon" src="../assets/img/icon-keyboard.svg" alt="" />
+            <img class="option-icon"
+                 src="../assets/img/icon-keyboard.svg"
+                 alt=""
+                 aria-hidden="true" />
             <div class="option-card-text">
-              <h3>Keyboard mode</h3>
-              <p>Browse the web using only the keyboard</p>
+              <h3 id="kb-label">Keyboard mode</h3>
+              <p id="kb-desc">Browse the web using only the keyboard</p>
             </div>
           </div>
-          <div class="toggle-switch is-on">
-            <span class="toggle-text">ON</span>
-            <span class="toggle-knob"></span>
-          </div>
+          <button id="toggle-keyboard"
+                  type="button"
+                  class="toggle-switch is-off"
+                  role="switch"
+                  aria-checked="false"
+                  aria-labelledby="kb-label"
+                  aria-describedby="kb-desc">
+            <span class="toggle-knob" aria-hidden="true"></span>
+            <span class="toggle-label">OFF</span>
+          </button>
         </div>
 
+        <!-- Screen reader toggle -->
         <div class="option-card">
           <div class="option-card-info">
-            <img class="option-icon" src="../assets/img/icon-screen.svg" alt="" />
+            <img class="option-icon"
+                 src="../assets/img/icon-screen.svg"
+                 alt=""
+                 aria-hidden="true" />
             <div class="option-card-text">
-              <h3>Screen reader</h3>
-              <p>Optimized for screen readers</p>
+              <h3 id="sr-label">Screen reader</h3>
+              <p id="sr-desc">Optimized for screen readers</p>
             </div>
           </div>
-          <div class="toggle-switch is-off">
-            <span class="toggle-knob"></span>
-            <span class="toggle-text">OFF</span>
-          </div>
+          <button id="toggle-screen-reader"
+                  type="button"
+                  class="toggle-switch is-off"
+                  role="switch"
+                  aria-checked="false"
+                  aria-labelledby="sr-label"
+                  aria-describedby="sr-desc">
+            <span class="toggle-knob" aria-hidden="true"></span>
+            <span class="toggle-label">OFF</span>
+          </button>
         </div>
       </div>
 
+      <!-- Right column: keyboard shortcuts -->
       <div class="accessibility-col">
-        <h2>Keyboard shortcuts</h2>
+        <h2 id="shortcuts-heading">Keyboard shortcuts</h2>
 
-        <div class="shortcuts-table">
-          <div class="shortcuts-row is-header">
-            <span>KEY</span>
-            <span>ACTION</span>
-          </div>
-          <div class="shortcuts-row">
-            <span>TAB</span>
-            <span>Next item</span>
-          </div>
-          <div class="shortcuts-row">
-            <span>SHIFT + TAB</span>
-            <span>Previous item</span>
-          </div>
-          <div class="shortcuts-row">
-            <span>ENTER</span>
-            <span>Activate item</span>
-          </div>
-          <div class="shortcuts-row">
-            <span>ESCAPE</span>
-            <span>Close panel</span>
-          </div>
-          <div class="shortcuts-row">
-            <span>ARROW KEY</span>
-            <span>Browse list</span>
-          </div>
-          <div class="shortcuts-row">
-            <span>CTRL + .</span>
-            <span>Toggle Reader</span>
-          </div>
-        </div>
+        <table class="shortcuts-table"
+               aria-labelledby="shortcuts-heading"
+               role="table">
+          <thead>
+            <tr class="shortcuts-row is-header">
+              <th scope="col">KEY</th>
+              <th scope="col">ACTION</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="shortcuts-row">
+              <td><kbd>TAB</kbd></td>
+              <td>Next item</td>
+            </tr>
+            <tr class="shortcuts-row">
+              <td><kbd>SHIFT + TAB</kbd></td>
+              <td>Previous item</td>
+            </tr>
+            <tr class="shortcuts-row">
+              <td><kbd>ENTER</kbd></td>
+              <td>Activate item</td>
+            </tr>
+            <tr class="shortcuts-row">
+              <td><kbd>ESCAPE</kbd></td>
+              <td>Close panel</td>
+            </tr>
+            <tr class="shortcuts-row">
+              <td><kbd>ARROW KEY</kbd></td>
+              <td>Browse list</td>
+            </tr>
+            <tr class="shortcuts-row">
+              <td><kbd>CTRL + .</kbd></td>
+              <td>Toggle Reader</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
 
     <div class="accessibility-footer">
-      <button type="button" class="accessibility-close-btn">CLOSE</button>
+      <button id="accessibility-close-btn"
+              type="button"
+              class="accessibility-close-btn btn-purple"
+              aria-label="Close accessibility settings">
+        CLOSE
+      </button>
     </div>
+
   </div>
+
+  <script src="../js/modal-accessibility.js"></script>
 </body>
 </html>
