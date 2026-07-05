@@ -22,13 +22,18 @@
   --font-bold: "Inter-Bold", Helvetica, sans-serif;
 }
 
-/* Full-screen auth/page background */
+/* Base body background for auth screens (dashboard.css overrides for app screens) */
+body {
+  background-color: var(--color-bg-page);
+}
+
+/* Centered 1440px frame for auth screens */
 .auth-page {
   position: relative;
   background-color: var(--color-bg-page);
-  width: 100%;
-  min-width: 1440px;
+  width: 1440px;
   min-height: 900px;
+  margin: 0 auto;
 }
 
 /* White rounded card used by login, sign up, etc.
