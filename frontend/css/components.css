@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Design tokens and shared UI pieces reused across screens (login, sign up, ...).
    Page-specific files (e.g. login.css, signup.css) only hold positions/sizes. */
 
@@ -138,3 +139,6 @@ body {
   color: #ffffff;
   white-space: nowrap;
 }
+=======
+/* Shared component styles moved to globals.css. */
+>>>>>>> a8d71893f0201a268612695fe5052af3d3dae6f5

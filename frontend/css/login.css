@@ -9,12 +9,13 @@
   );
 }
 
-.login-card {
-  position: absolute;
-  top: 160px;
-  left: 500px;
-  width: 440px;
-  height: 580px;
+.login-card{
+    position:absolute;
+    top:160px;
+    left:50%;
+    transform:translateX(-50%);
+    width:440px;
+    height:580px;
 }
 
 .login-card .label-email {
@@ -88,6 +89,7 @@
   left: 128px;
   font-size: 13px;
 }
+
 
 /* Logo cluster - positions are percentages of the 1440x900 .element-login frame */
 .login-logo .logo-vector {
