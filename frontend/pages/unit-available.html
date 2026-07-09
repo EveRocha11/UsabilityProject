@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta charset="utf-8" />
@@ -9,6 +10,7 @@
   <link rel="stylesheet" href="../css/dashboard.css">
   <link rel="stylesheet" href="../css/unit-detail.css">
 </head>
+
 <body>
   <div class="dashboard-page">
 
@@ -20,7 +22,9 @@
       <div class="header-actions">
         <button type="button" class="header-btn" aria-label="Text size settings">Aa</button>
         <button type="button" class="header-btn header-btn-icon" aria-label="Toggle dark mode">◐</button>
-        <div class="avatar" aria-live="polite" aria-label="User avatar">A</div>
+        <a href="profile.html" class="avatar-link">
+          <div class="avatar">A</div>
+        </a>
       </div>
     </header>
 
@@ -60,11 +64,8 @@
             Back
           </a>
           <h1 id="unit-banner-title">Unit</h1>
-          <img id="unit-banner-lock"
-               class="unit-banner-lock"
-               src="../assets/img/icon-padlock.svg"
-               alt="This unit's lessons are locked"
-               style="display:none" />
+          <img id="unit-banner-lock" class="unit-banner-lock" src="../assets/img/icon-padlock.svg"
+            alt="This unit's lessons are locked" style="display:none" />
         </div>
 
         <!-- Grammar section -->
@@ -92,4 +93,5 @@
   <script src="../js/units-data.js"></script>
   <script src="../js/unit-detail.js"></script>
 </body>
+
 </html>

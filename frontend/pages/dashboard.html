@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta charset="utf-8" />
@@ -8,6 +9,7 @@
   <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/dashboard.css">
 </head>
+
 <body>
   <div class="dashboard-page">
     <header class="dashboard-header">
@@ -18,7 +20,10 @@
       <div class="header-actions">
         <button type="button" class="header-btn">Aa</button>
         <button type="button" class="header-btn header-btn-icon">◐</button>
-        <div class="avatar">A</div>
+
+        <a href="profile.html" class="avatar-link">
+          <div class="avatar">A</div>
+        </a>
       </div>
     </header>
 
@@ -127,7 +132,8 @@
             <img src="../assets/img/icon-book.svg" id="challenge-icon" alt="" />
           </div>
           <div class="challenge-body">
-            <p class="challenge-complete-badge" id="challenge-complete-badge" style="display:none">✓ Challenge complete!</p>
+            <p class="challenge-complete-badge" id="challenge-complete-badge" style="display:none">✓ Challenge complete!
+            </p>
             <p class="challenge-text" id="challenge-text">Get a score of 80% or higher in 2 lessons</p>
             <div class="progress-track challenge-progress-track">
               <div class="progress-fill challenge-progress-fill"></div>
@@ -160,4 +166,5 @@
 
   <script src="../js/dashboard.js"></script>
 </body>
+
 </html>

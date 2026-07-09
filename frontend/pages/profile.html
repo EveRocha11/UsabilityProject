@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -9,6 +10,7 @@
   <link rel="stylesheet" href="../css/dashboard.css">
   <link rel="stylesheet" href="../css/perfil.css">
 </head>
+
 <body>
   <div class="dashboard-page perfil-page">
     <header class="dashboard-header">
@@ -19,7 +21,7 @@
       <div class="header-actions">
         <button type="button" class="header-btn">Aa</button>
         <button type="button" class="header-btn header-btn-icon">◐</button>
-        <div class="avatar">A</div>
+        <div class="avatar profile-avatar-active">A</div>
       </div>
     </header>
 
@@ -38,7 +40,7 @@
             <img class="nav-icon" src="../assets/img/icon-path.svg" alt="" />
             <span>Units</span>
           </a>
-          <a class="nav-item is-active" href="#">
+          <a class="nav-item" href="modal-accessibility.html">
             <img class="nav-icon" src="../assets/img/icon-person.svg" alt="" />
             <span>Accesibility</span>
           </a>
@@ -62,7 +64,8 @@
         <section class="profile-card" aria-label="Profile details">
           <button type="button" class="profile-edit-btn" aria-label="Edit profile">
             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path d="M3 17.25V21h3.75L18.81 8.94l-3.75-3.75L3 17.25zm2.92 2.83H5v-.92l9.06-9.06.92.92L5.92 20.08zM20.71 7.04a1 1 0 0 0 0-1.42L18.38 3.29a1 1 0 0 0-1.42 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+              <path
+                d="M3 17.25V21h3.75L18.81 8.94l-3.75-3.75L3 17.25zm2.92 2.83H5v-.92l9.06-9.06.92.92L5.92 20.08zM20.71 7.04a1 1 0 0 0 0-1.42L18.38 3.29a1 1 0 0 0-1.42 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
             </svg>
           </button>
 
@@ -70,21 +73,21 @@
             <div class="profile-field-row">
               <div class="profile-label">NAME</div>
               <div class="profile-input">
-                <input type="text" value="Ana" readonly aria-label="Name" />
+                <input type="text" id="profile-name" value="Ana" readonly aria-label="Name" />
               </div>
             </div>
 
-            <div class="profile-field-row" readonly>
+            <div class="profile-field-row">
               <div class="profile-label">EMAIL</div>
               <div class="profile-input">
-                <input type="email" value="ana@gmail.com" readonly aria-label="Email" />
+                <input type="email" id="profile-email" value="ana@gmail.com" readonly aria-label="Email" />
               </div>
             </div>
 
             <div class="profile-field-row">
               <div class="profile-label">PASSWORD</div>
               <div class="profile-input profile-password-input">
-                <input type="password" value="password" readonly aria-label="Password" />
+                <input type="password" id="profile-password" value="12345678" readonly aria-label="Password" />
                 <button type="button" class="profile-password-toggle" aria-label="Show or hide password">
                   <img src="../assets/img/eye-slash.svg" alt="" />
                 </button>
@@ -130,5 +133,8 @@
       </main>
     </div>
   </div>
+
+  <script src="../js/profile.js"></script>
 </body>
+
 </html>

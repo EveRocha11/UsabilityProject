@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta charset="utf-8" />
@@ -9,6 +10,7 @@
   <link rel="stylesheet" href="../css/dashboard.css">
   <link rel="stylesheet" href="../css/units.css">
 </head>
+
 <body>
   <div class="dashboard-page">
 
@@ -20,7 +22,9 @@
       <div class="header-actions">
         <button type="button" class="header-btn" aria-label="Text size settings">Aa</button>
         <button type="button" class="header-btn header-btn-icon" aria-label="Toggle dark mode">◐</button>
-        <div class="avatar" aria-live="polite" aria-label="User avatar">A</div>
+        <a href="profile.html" class="avatar-link">
+          <div class="avatar">A</div>
+        </a>
       </div>
     </header>
 
@@ -60,20 +64,16 @@
 
           <!-- Unit 1 -->
           <span class="timeline-dot is-done" id="unit-dot-1" aria-hidden="true"></span>
-          <a id="unit-card-1"
-             class="unit-card"
-             href="unit-available.html?id=1"
-             role="listitem"
-             aria-label="Unit 1: Changes, Stories and Experiences. Not started.">
+          <a id="unit-card-1" class="unit-card" href="unit-available.html?id=1" role="listitem"
+            aria-label="Unit 1: Changes, Stories and Experiences. Not started.">
             <div class="unit-card-top">
               <span class="unit-badge" aria-hidden="true">U1</span>
               <span class="unit-status unit-status-available">Start</span>
             </div>
             <div class="unit-card-title">Unit 1</div>
             <div class="unit-card-meta">3 lessons · ~30 min</div>
-            <div class="progress-track unit-progress-track"
-                 role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
-                 aria-label="Unit 1 progress: 0%">
+            <div class="progress-track unit-progress-track" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+              aria-valuemax="100" aria-label="Unit 1 progress: 0%">
               <div class="progress-fill" style="width:0%"></div>
             </div>
             <div class="unit-progress-label">0%</div>
@@ -81,20 +81,16 @@
 
           <!-- Unit 2 -->
           <span class="timeline-dot is-upcoming" id="unit-dot-2" aria-hidden="true"></span>
-          <a id="unit-card-2"
-             class="unit-card is-locked"
-             href="unit-available.html?id=2"
-             role="listitem"
-             aria-label="Unit 2: Professional World and Personal Growth. Locked — complete Unit 1 first.">
+          <a id="unit-card-2" class="unit-card is-locked" href="unit-available.html?id=2" role="listitem"
+            aria-label="Unit 2: Professional World and Personal Growth. Locked — complete Unit 1 first.">
             <div class="unit-card-top">
               <span class="unit-badge" aria-hidden="true">U2</span>
               <img class="unit-lock-icon" src="../assets/img/icon-padlock.svg" alt="" aria-hidden="true" />
             </div>
             <div class="unit-card-title">Unit 2</div>
             <div class="unit-card-meta">3 lessons · ~30 min</div>
-            <div class="progress-track unit-progress-track"
-                 role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
-                 aria-label="Unit 2 progress: 0%" style="display:none">
+            <div class="progress-track unit-progress-track" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+              aria-valuemax="100" aria-label="Unit 2 progress: 0%" style="display:none">
               <div class="progress-fill" style="width:0%"></div>
             </div>
             <div class="unit-progress-label" style="display:none">0%</div>
@@ -102,20 +98,16 @@
 
           <!-- Unit 3 -->
           <span class="timeline-dot is-upcoming" id="unit-dot-3" aria-hidden="true"></span>
-          <a id="unit-card-3"
-             class="unit-card is-locked"
-             href="unit-available.html?id=3"
-             role="listitem"
-             aria-label="Unit 3: Culture, Entertainment and Global Expressions. Locked — complete Unit 2 first.">
+          <a id="unit-card-3" class="unit-card is-locked" href="unit-available.html?id=3" role="listitem"
+            aria-label="Unit 3: Culture, Entertainment and Global Expressions. Locked — complete Unit 2 first.">
             <div class="unit-card-top">
               <span class="unit-badge" aria-hidden="true">U3</span>
               <img class="unit-lock-icon" src="../assets/img/icon-padlock.svg" alt="" aria-hidden="true" />
             </div>
             <div class="unit-card-title">Unit 3</div>
             <div class="unit-card-meta">3 lessons · ~30 min</div>
-            <div class="progress-track unit-progress-track"
-                 role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
-                 aria-label="Unit 3 progress: 0%" style="display:none">
+            <div class="progress-track unit-progress-track" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+              aria-valuemax="100" aria-label="Unit 3 progress: 0%" style="display:none">
               <div class="progress-fill" style="width:0%"></div>
             </div>
             <div class="unit-progress-label" style="display:none">0%</div>
@@ -123,20 +115,16 @@
 
           <!-- Unit 4 -->
           <span class="timeline-dot is-upcoming" id="unit-dot-4" aria-hidden="true"></span>
-          <a id="unit-card-4"
-             class="unit-card is-locked"
-             href="unit-available.html?id=4"
-             role="listitem"
-             aria-label="Unit 4: Communication, Relationships and Plans. Locked — complete Unit 3 first.">
+          <a id="unit-card-4" class="unit-card is-locked" href="unit-available.html?id=4" role="listitem"
+            aria-label="Unit 4: Communication, Relationships and Plans. Locked — complete Unit 3 first.">
             <div class="unit-card-top">
               <span class="unit-badge" aria-hidden="true">U4</span>
               <img class="unit-lock-icon" src="../assets/img/icon-padlock.svg" alt="" aria-hidden="true" />
             </div>
             <div class="unit-card-title">Unit 4</div>
             <div class="unit-card-meta">3 lessons · ~30 min</div>
-            <div class="progress-track unit-progress-track"
-                 role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"
-                 aria-label="Unit 4 progress: 0%" style="display:none">
+            <div class="progress-track unit-progress-track" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+              aria-valuemax="100" aria-label="Unit 4 progress: 0%" style="display:none">
               <div class="progress-fill" style="width:0%"></div>
             </div>
             <div class="unit-progress-label" style="display:none">0%</div>
@@ -150,4 +138,5 @@
   <script src="../js/units-data.js"></script>
   <script src="../js/units.js"></script>
 </body>
+
 </html>

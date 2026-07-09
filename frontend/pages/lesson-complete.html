@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta charset="utf-8" />
@@ -9,6 +10,7 @@
   <link rel="stylesheet" href="../css/dashboard.css">
   <link rel="stylesheet" href="../css/lesson.css">
 </head>
+
 <body>
   <div class="dashboard-page">
     <header class="dashboard-header">
@@ -19,7 +21,9 @@
       <div class="header-actions">
         <button type="button" class="header-btn">Aa</button>
         <button type="button" class="header-btn header-btn-icon">◐</button>
-        <div class="avatar">A</div>
+        <a href="profile.html" class="avatar-link">
+          <div class="avatar">A</div>
+        </a>
       </div>
     </header>
 
@@ -59,45 +63,46 @@
         </div>
 
         <div class="lesson-complete-content">
-        <div class="lesson-complete-row">
-          <h1 class="lesson-complete-heading">Congratulations! You've completed the level!</h1>
+          <div class="lesson-complete-row">
+            <h1 class="lesson-complete-heading">Congratulations! You've completed the level!</h1>
 
-          <div class="lesson-avatar-box lesson-avatar-box-lg">
-            <div class="avatar-face avatar-face-lg">
-              <div class="avatar-vector avatar-logo-02"><img src="../assets/img/logo-02.svg" alt="Personaje" /></div>
-              <div class="avatar-vector avatar-logo-03a"><img src="../assets/img/logo-03.svg" alt="" /></div>
-              <div class="avatar-vector avatar-logo-03b"><img src="../assets/img/logo-03.svg" alt="" /></div>
-              <div class="avatar-vector avatar-logo-04a"><img src="../assets/img/logo-04.svg" alt="" /></div>
-              <div class="avatar-vector avatar-logo-04b"><img src="../assets/img/logo-04.svg" alt="" /></div>
-              <div class="avatar-vector avatar-logo-05"><img src="../assets/img/logo-05.svg" alt="" /></div>
-              <div class="avatar-vector avatar-logo-06a"><img src="../assets/img/logo-06.svg" alt="" /></div>
-              <div class="avatar-vector avatar-logo-06b"><img src="../assets/img/logo-06.svg" alt="" /></div>
-              <div class="avatar-vector avatar-logo-07"><img src="../assets/img/logo-07.svg" alt="" /></div>
-              <div class="avatar-vector avatar-logo-08a"><img src="../assets/img/logo-08.svg" alt="" /></div>
-              <div class="avatar-vector avatar-logo-08b"><img src="../assets/img/logo-08.svg" alt="" /></div>
-              <div class="avatar-vector avatar-logo-09a"><img src="../assets/img/logo-09.svg" alt="" /></div>
-              <div class="avatar-vector avatar-logo-09b"><img src="../assets/img/logo-09.svg" alt="" /></div>
-              <div class="avatar-vector avatar-logo-10a"><img src="../assets/img/logo-10.svg" alt="" /></div>
-              <div class="avatar-vector avatar-logo-10b"><img src="../assets/img/logo-10.svg" alt="" /></div>
-              <div class="avatar-vector avatar-logo-11"><img src="../assets/img/logo-11.svg" alt="" /></div>
-              <div class="avatar-vector avatar-logo-12"><img src="../assets/img/logo-12.svg" alt="" /></div>
-              <div class="avatar-vector avatar-logo-13"><img src="../assets/img/logo-13.svg" alt="" /></div>
-              <div class="avatar-vector avatar-logo-14"><img src="../assets/img/logo-14.svg" alt="" /></div>
+            <div class="lesson-avatar-box lesson-avatar-box-lg">
+              <div class="avatar-face avatar-face-lg">
+                <div class="avatar-vector avatar-logo-02"><img src="../assets/img/logo-02.svg" alt="Personaje" /></div>
+                <div class="avatar-vector avatar-logo-03a"><img src="../assets/img/logo-03.svg" alt="" /></div>
+                <div class="avatar-vector avatar-logo-03b"><img src="../assets/img/logo-03.svg" alt="" /></div>
+                <div class="avatar-vector avatar-logo-04a"><img src="../assets/img/logo-04.svg" alt="" /></div>
+                <div class="avatar-vector avatar-logo-04b"><img src="../assets/img/logo-04.svg" alt="" /></div>
+                <div class="avatar-vector avatar-logo-05"><img src="../assets/img/logo-05.svg" alt="" /></div>
+                <div class="avatar-vector avatar-logo-06a"><img src="../assets/img/logo-06.svg" alt="" /></div>
+                <div class="avatar-vector avatar-logo-06b"><img src="../assets/img/logo-06.svg" alt="" /></div>
+                <div class="avatar-vector avatar-logo-07"><img src="../assets/img/logo-07.svg" alt="" /></div>
+                <div class="avatar-vector avatar-logo-08a"><img src="../assets/img/logo-08.svg" alt="" /></div>
+                <div class="avatar-vector avatar-logo-08b"><img src="../assets/img/logo-08.svg" alt="" /></div>
+                <div class="avatar-vector avatar-logo-09a"><img src="../assets/img/logo-09.svg" alt="" /></div>
+                <div class="avatar-vector avatar-logo-09b"><img src="../assets/img/logo-09.svg" alt="" /></div>
+                <div class="avatar-vector avatar-logo-10a"><img src="../assets/img/logo-10.svg" alt="" /></div>
+                <div class="avatar-vector avatar-logo-10b"><img src="../assets/img/logo-10.svg" alt="" /></div>
+                <div class="avatar-vector avatar-logo-11"><img src="../assets/img/logo-11.svg" alt="" /></div>
+                <div class="avatar-vector avatar-logo-12"><img src="../assets/img/logo-12.svg" alt="" /></div>
+                <div class="avatar-vector avatar-logo-13"><img src="../assets/img/logo-13.svg" alt="" /></div>
+                <div class="avatar-vector avatar-logo-14"><img src="../assets/img/logo-14.svg" alt="" /></div>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="lesson-complete-actions">
-          <div class="lesson-points-card">
-            <span class="lesson-points-label">Points</span>
-            <span class="lesson-points-value">+4</span>
+          <div class="lesson-complete-actions">
+            <div class="lesson-points-card">
+              <span class="lesson-points-label">Points</span>
+              <span class="lesson-points-value">+4</span>
+            </div>
+            <button type="button" class="btn-success lesson-next-btn">NEXT</button>
           </div>
-          <button type="button" class="btn-success lesson-next-btn">NEXT</button>
-        </div>
         </div>
       </main>
     </div>
   </div>
   <script src="../js/lesson-complete.js"></script>
 </body>
+
 </html>
