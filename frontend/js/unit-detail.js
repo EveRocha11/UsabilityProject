@@ -36,7 +36,16 @@
       if (unitNowComplete) p.units[unitId].complete = true;
 
       p[`level${Number(pendingLesson)}Complete`] = true;
-      p.lessonsCompleted = Math.max(p.lessonsCompleted || 0, Number(pendingLesson));
+      const totalDone = Object.values(p.units).reduce((s, u) => s + u.lessons.filter(Boolean).length, 0);
+      p.lessonsCompleted = Math.max(p.lessonsCompleted || 0, totalDone);
+
+      // Accuracy: deduct for each wrong answer (max 5 per lesson)
+      const wrongs = parseInt(localStorage.getItem('nivela_lesson_wrongs') || '0', 10);
+      p.totalWrongs = (p.totalWrongs || 0) + wrongs;
+      p.accuracy = Math.max(0, Math.round((1 - p.totalWrongs / (Math.max(1, totalDone) * 5)) * 100));
+
+      // Badges = number of completed units
+      p.badges = Object.values(p.units).filter(u => u.complete).length;
 
       nivelSaveProgress(key, p);
     }

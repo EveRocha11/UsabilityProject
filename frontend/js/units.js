@@ -33,7 +33,13 @@
       }
 
       p[`level${Number(pendingLesson)}Complete`] = true;
-      p.lessonsCompleted = Math.max(p.lessonsCompleted || 0, Number(pendingLesson));
+      const totalDone = Object.values(p.units).reduce((s, u) => s + u.lessons.filter(Boolean).length, 0);
+      p.lessonsCompleted = Math.max(p.lessonsCompleted || 0, totalDone);
+
+      const wrongs = parseInt(localStorage.getItem('nivela_lesson_wrongs') || '0', 10);
+      p.totalWrongs = (p.totalWrongs || 0) + wrongs;
+      p.accuracy = Math.max(0, Math.round((1 - p.totalWrongs / (Math.max(1, totalDone) * 5)) * 100));
+      p.badges = Object.values(p.units).filter(u => u.complete).length;
 
       nivelSaveProgress(key, p);
     }

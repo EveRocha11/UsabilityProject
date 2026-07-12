@@ -4,15 +4,16 @@
   justify-content: center;
   min-height: 100vh;
   padding: 20px;
-  background-color: var(--color-surface);
+  background: rgba(0, 0, 0, 0.55);
 }
 
 .support-modal {
   position: relative;
   width: min(958px, calc(100vw - 40px));
   padding: 38px 38px 24px;
-  border-radius: 8px;
+  border-radius: 16px;
   background-color: var(--color-surface);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4);
 }
 
 .support-banner {
