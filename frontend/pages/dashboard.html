@@ -11,70 +11,76 @@
 </head>
 
 <body>
+  <!-- WCAG 2.4.1 — Saltar al contenido principal -->
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
   <div class="dashboard-page">
+    <!-- WCAG 1.3.1 — <header> tiene rol landmark "banner" implícito -->
     <header class="dashboard-header">
-      <div class="brand">
-        <div class="brand-mark">N</div>
+      <div class="brand" aria-label="Nivela">
+        <div class="brand-mark" aria-hidden="true">N</div>
         <span class="brand-name">Nivela</span>
       </div>
       <div class="header-actions">
-        <button type="button" class="header-btn">Aa</button>
-        <button type="button" class="header-btn header-btn-icon">◐</button>
-
-        <a href="profile.html" class="avatar-link">
-          <div class="avatar">A</div>
+        <!-- WCAG 1.1.1 / 4.1.2 — botones de icono con aria-label descriptivo -->
+        <button type="button" class="header-btn" aria-label="Cambiar tamaño de texto">Aa</button>
+        <button type="button" class="header-btn header-btn-icon" aria-label="Alternar modo oscuro/claro">◐</button>
+        <a href="profile.html" class="avatar-link" aria-label="Ver perfil de usuario">
+          <div class="avatar" aria-hidden="true">A</div>
         </a>
       </div>
     </header>
 
     <div class="dashboard-body">
-      <aside class="sidebar">
-        <nav class="nav-list">
-          <a class="nav-item is-active" href="#">
-            <img class="nav-icon" src="../assets/img/icon-home.svg" alt="" />
+      <aside class="sidebar" aria-label="Navegación principal">
+        <nav class="nav-list" role="navigation">
+          <!-- WCAG 2.4.4 — aria-current indica la página activa -->
+          <a class="nav-item is-active" href="#" aria-current="page" aria-label="Inicio, página actual">
+            <img class="nav-icon" src="../assets/img/icon-home.svg" alt="" aria-hidden="true" />
             <span>Home</span>
           </a>
-          <a class="nav-item" href="challenges.html">
-            <img class="nav-icon" src="../assets/img/icon-sword.svg" alt="" />
+          <a class="nav-item" href="challenges.html" aria-label="Desafíos">
+            <img class="nav-icon" src="../assets/img/icon-sword.svg" alt="" aria-hidden="true" />
             <span>Challenges</span>
           </a>
-          <a class="nav-item" href="units.html">
-            <img class="nav-icon" src="../assets/img/icon-path.svg" alt="" />
+          <a class="nav-item" href="units.html" aria-label="Unidades">
+            <img class="nav-icon" src="../assets/img/icon-path.svg" alt="" aria-hidden="true" />
             <span>Units</span>
           </a>
-          <a class="nav-item" href="modal-accessibility.html">
-            <img class="nav-icon" src="../assets/img/icon-person.svg" alt="" />
+          <a class="nav-item" href="modal-accessibility.html" aria-label="Accesibilidad">
+            <img class="nav-icon" src="../assets/img/icon-person.svg" alt="" aria-hidden="true" />
             <span>Accesibility</span>
           </a>
         </nav>
 
-        <a class="nav-item nav-footer-item" href="#">
-          <img class="help-icon" src="../assets/img/icon-help.svg" alt="" />
+        <a class="nav-item nav-footer-item" href="#" aria-label="Ayuda">
+          <img class="help-icon" src="../assets/img/icon-help.svg" alt="" aria-hidden="true" />
           <span>Help</span>
         </a>
       </aside>
 
-      <main class="main-content">
+      <main class="main-content" id="main-content">
         <div class="content-header">
           <div class="greeting">
             <h1>¡Hi, Ana!</h1>
             <p>Continue with your learning path</p>
           </div>
 
-          <div class="stats-row">
-            <div class="stat-card">
-              <img class="stat-icon" src="../assets/img/icon-trophy.svg" alt="" />
-              <div class="stat-value">Top 5%</div>
+          <!-- WCAG 1.3.1 — tarjetas de estadística semánticamente claras -->
+          <div class="stats-row" role="list" aria-label="Estadísticas del usuario">
+            <div class="stat-card" role="listitem">
+              <img class="stat-icon" src="../assets/img/icon-trophy.svg" alt="" aria-hidden="true" />
+              <div class="stat-value" aria-label="Posición en el ranking">Top 5%</div>
               <div class="stat-label">Leader board</div>
             </div>
-            <div class="stat-card">
-              <img class="stat-icon" src="../assets/img/icon-medal.svg" alt="" />
-              <div class="stat-value">12</div>
+            <div class="stat-card" role="listitem">
+              <img class="stat-icon" src="../assets/img/icon-medal.svg" alt="" aria-hidden="true" />
+              <div class="stat-value" aria-label="Insignias obtenidas">12</div>
               <div class="stat-label">Badges</div>
             </div>
-            <div class="stat-card">
-              <img class="stat-icon" src="../assets/img/icon-lightning.svg" alt="" />
-              <div class="stat-value">94%</div>
+            <div class="stat-card" role="listitem">
+              <img class="stat-icon" src="../assets/img/icon-lightning.svg" alt="" aria-hidden="true" />
+              <div class="stat-value" aria-label="Porcentaje de precisión">94%</div>
               <div class="stat-label">Accuracy</div>
             </div>
           </div>
@@ -88,36 +94,45 @@
           </div>
           <div class="progress-banner-right">
             <div class="progress-banner-meta">I2 · 2/3 lessons completed</div>
-            <div class="progress-track">
+            <!-- WCAG 1.3.1 — role="progressbar" permite a lectores de pantalla leer el progreso -->
+            <div class="progress-track"
+                 role="progressbar"
+                 aria-valuenow="66"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 aria-label="Progreso de lecciones de la unidad actual">
               <div class="progress-fill" style="width: 66%"></div>
             </div>
           </div>
         </div>
 
-        <div class="levels-row">
-          <div class="level-card is-complete">
+        <!-- WCAG 1.3.1 — jerarquía de encabezados: h2 para secciones de la misma página -->
+        <h2 class="section-title" style="display:none">Lecciones actuales</h2>
+
+        <div class="levels-row" role="list" aria-label="Lecciones de la unidad actual">
+          <div class="level-card is-complete" role="listitem">
             <div class="level-top">
-              <span class="level-badge">I2</span>
-              <img class="level-status-icon" src="../assets/img/icon-check.svg" alt="Completado" />
+              <span class="level-badge" aria-hidden="true">I2</span>
+              <img class="level-status-icon" src="../assets/img/icon-check.svg" alt="Completada" />
             </div>
             <div class="level-title">Level 1</div>
             <div class="level-duration">~ 30 min</div>
             <div class="level-lesson">Present Perfect — ever, never, already, yet</div>
           </div>
 
-          <div class="level-card">
+          <div class="level-card" role="listitem">
             <div class="level-top">
-              <span class="level-badge">I2</span>
+              <span class="level-badge" aria-hidden="true">I2</span>
             </div>
             <div class="level-title">Level 2</div>
             <div class="level-duration">~ 30 min</div>
             <div class="level-lesson">Past Simple + Past Continuous — when &amp; while</div>
           </div>
 
-          <div class="level-card is-locked">
+          <div class="level-card is-locked" role="listitem">
             <div class="level-top">
-              <span class="level-badge">I2</span>
-              <img class="level-status-icon" src="../assets/img/icon-padlock.svg" alt="Bloqueado" />
+              <span class="level-badge" aria-hidden="true">I2</span>
+              <img class="level-status-icon" src="../assets/img/icon-padlock.svg" alt="Bloqueada" />
             </div>
             <div class="level-title">Level 3</div>
             <div class="level-duration">~ 30 min</div>
@@ -128,41 +143,54 @@
         <h2 class="section-title">Daily challenge</h2>
 
         <div class="challenge-card" id="daily-challenge-card">
-          <div class="challenge-icon-box">
+          <div class="challenge-icon-box" aria-hidden="true">
             <img src="../assets/img/icon-book.svg" id="challenge-icon" alt="" />
           </div>
           <div class="challenge-body">
-            <p class="challenge-complete-badge" id="challenge-complete-badge" style="display:none">✓ Challenge complete!
-            </p>
+            <p class="challenge-complete-badge" id="challenge-complete-badge" style="display:none">✓ Challenge complete!</p>
             <p class="challenge-text" id="challenge-text">Get a score of 80% or higher in 2 lessons</p>
-            <div class="progress-track challenge-progress-track">
+            <div class="progress-track challenge-progress-track"
+                 role="progressbar"
+                 aria-valuenow="0"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 aria-label="Progreso del desafío diario">
               <div class="progress-fill challenge-progress-fill"></div>
             </div>
             <div class="challenge-meta" id="challenge-meta">3 lessons · ~ 30 min</div>
           </div>
-          <button type="button" class="btn-success" id="daily-challenge-start">START</button>
+          <button type="button" class="btn-success" id="daily-challenge-start" aria-label="Iniciar desafío diario">START</button>
         </div>
 
         <h2 class="section-title">Weekly challenge</h2>
 
         <div class="challenge-card" id="weekly-challenge-card">
-          <div class="challenge-icon-box">
+          <div class="challenge-icon-box" aria-hidden="true">
             <img src="../assets/img/icon-path.svg" id="weekly-challenge-icon" alt="" />
           </div>
           <div class="challenge-body">
             <p class="challenge-complete-badge" id="weekly-complete-badge" style="display:none">✓ All weekly done!</p>
             <p class="challenge-text" id="weekly-challenge-text">Complete all 3 levels in Block 1</p>
-            <div class="progress-track challenge-progress-track">
+            <div class="progress-track challenge-progress-track"
+                 role="progressbar"
+                 aria-valuenow="0"
+                 aria-valuemin="0"
+                 aria-valuemax="100"
+                 aria-label="Progreso del desafío semanal">
               <div class="progress-fill challenge-progress-fill" id="weekly-progress-fill"></div>
             </div>
             <div class="challenge-meta" id="weekly-challenge-meta">3 levels · ~ 1.5 hrs</div>
           </div>
-          <button type="button" class="btn-purple" id="weekly-challenge-start">START</button>
+          <button type="button" class="btn-purple" id="weekly-challenge-start" aria-label="Iniciar desafío semanal">START</button>
         </div>
       </main>
     </div>
   </div>
-  <div id="locked-toast" class="locked-toast">Complete the previous lesson to unlock this one</div>
+
+  <!-- WCAG 4.1.3 — role="status" anuncia mensajes dinámicos al lector de pantalla -->
+  <div id="locked-toast" class="locked-toast" role="status" aria-live="polite" aria-atomic="true">
+    Complete the previous lesson to unlock this one
+  </div>
 
   <script src="../js/header-controls.js"></script>
   <script src="../js/units-data.js"></script>

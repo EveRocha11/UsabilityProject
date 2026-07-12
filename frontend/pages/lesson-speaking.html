@@ -15,55 +15,60 @@
 <body>
   <div class="dashboard-page">
     <header class="dashboard-header">
-      <div class="brand">
-        <div class="brand-mark">N</div>
+      <div class="brand" aria-label="Nivela">
+        <div class="brand-mark" aria-hidden="true">N</div>
         <span class="brand-name">Nivela</span>
       </div>
       <div class="header-actions">
-        <button type="button" class="header-btn">Aa</button>
-        <button type="button" class="header-btn header-btn-icon">◐</button>
-        <div class="avatar" id="header-avatar">A</div>
+        <button type="button" class="header-btn" aria-label="Cambiar tamaño de texto">Aa</button>
+        <button type="button" class="header-btn header-btn-icon" aria-label="Alternar modo oscuro/claro">◐</button>
+        <div class="avatar" id="header-avatar" aria-hidden="true">A</div>
       </div>
     </header>
 
     <div class="dashboard-body">
-      <aside class="sidebar">
-        <nav class="nav-list">
-          <a class="nav-item is-active" href="dashboard.html">
-            <img class="nav-icon" src="../assets/img/icon-home.svg" alt="" />
+      <aside class="sidebar" aria-label="Navegación principal">
+        <nav class="nav-list" role="navigation">
+          <a class="nav-item is-active" href="dashboard.html" aria-label="Inicio">
+            <img class="nav-icon" src="../assets/img/icon-home.svg" alt="" aria-hidden="true" />
             <span>Home</span>
           </a>
-          <a class="nav-item" href="challenges.html">
-            <img class="nav-icon" src="../assets/img/icon-sword.svg" alt="" />
+          <a class="nav-item" href="challenges.html" aria-label="Desafíos">
+            <img class="nav-icon" src="../assets/img/icon-sword.svg" alt="" aria-hidden="true" />
             <span>Challenges</span>
           </a>
-          <a class="nav-item" href="units.html">
-            <img class="nav-icon" src="../assets/img/icon-path.svg" alt="" />
+          <a class="nav-item" href="units.html" aria-label="Unidades">
+            <img class="nav-icon" src="../assets/img/icon-path.svg" alt="" aria-hidden="true" />
             <span>Units</span>
           </a>
-          <a class="nav-item" href="modal-accessibility.html">
-            <img class="nav-icon" src="../assets/img/icon-person.svg" alt="" />
+          <a class="nav-item" href="modal-accessibility.html" aria-label="Accesibilidad">
+            <img class="nav-icon" src="../assets/img/icon-person.svg" alt="" aria-hidden="true" />
             <span>Accesibility</span>
           </a>
         </nav>
 
-        <a class="nav-item nav-footer-item" href="#">
-          <img class="help-icon" src="../assets/img/icon-help.svg" alt="" />
+        <a class="nav-item nav-footer-item" href="#" aria-label="Ayuda">
+          <img class="help-icon" src="../assets/img/icon-help.svg" alt="" aria-hidden="true" />
           <span>Help</span>
         </a>
       </aside>
 
-      <main class="main-content lesson-main">
+      <main class="main-content lesson-main" id="main-content">
         <div class="lesson-top-bar">
-          <button type="button" class="lesson-close" id="close-btn" aria-label="Close">
-            <img src="../assets/img/icon-close.svg" alt="" />
+          <button type="button" class="lesson-close" id="close-btn" aria-label="Salir de la lección">
+            <img src="../assets/img/icon-close.svg" alt="" aria-hidden="true" />
           </button>
-          <div class="progress-track lesson-progress-track">
+          <div class="progress-track lesson-progress-track"
+               role="progressbar"
+               aria-valuenow="0"
+               aria-valuemin="0"
+               aria-valuemax="100"
+               aria-label="Progreso de la lección">
             <div class="progress-fill" id="lesson-progress-fill" style="width: 0%"></div>
           </div>
-          <div class="lesson-hearts">
-            <img src="../assets/img/icon-heart.svg" alt="" />
-            <span>5</span>
+          <div class="lesson-hearts" aria-label="5 corazones restantes">
+            <img src="../assets/img/icon-heart.svg" alt="" aria-hidden="true" />
+            <span aria-hidden="true">5</span>
           </div>
         </div>
 
@@ -97,13 +102,16 @@
 
             <div class="lesson-sentence-col">
               <div class="lesson-sentence-row">
+                <!-- WCAG 1.1.1 — ícono de altavoz con texto alternativo descriptivo -->
                 <img class="lesson-speaker-icon" id="speaker-icon" src="../assets/img/icon-speaker.svg"
-                  alt="Escuchar" />
-                <div class="lesson-sentence-bubble" id="sentence-bubble">Her first name is Anna, nice to meet you.</div>
+                  alt="Escuchar la oración en voz alta" />
+                <!-- WCAG 3.1.2 — contenido en inglés marcado con lang="en" -->
+                <div class="lesson-sentence-bubble" id="sentence-bubble" lang="en">Her first name is Anna, nice to meet you.</div>
               </div>
 
-              <button type="button" class="lesson-speak-btn" id="speak-btn">
-                <span class="lesson-speak-btn-icon">
+              <button type="button" class="lesson-speak-btn" id="speak-btn"
+                      aria-label="Activar micrófono para repetir la oración">
+                <span class="lesson-speak-btn-icon" aria-hidden="true">
                   <img src="../assets/img/icon-mic.svg" alt="" />
                 </span>
                 <span id="speak-label">CLICK TO SPEAK</span>
@@ -118,11 +126,12 @@
           <button type="button" class="btn-success" id="check-btn" disabled>CHECK</button>
         </div>
 
-        <!-- Feedback section: hidden until CHECK or SKIP -->
-        <div id="feedback-section" class="lesson-feedback-section" style="display:none">
+        <!-- WCAG 4.1.3 — role="alert" anuncia el feedback al aparecer -->
+        <div id="feedback-section" class="lesson-feedback-section" style="display:none"
+             role="alert" aria-live="assertive" aria-atomic="true">
           <p class="lesson-feedback-label" id="feedback-label">Feedback</p>
           <div class="lesson-feedback-card" id="feedback-card">
-            <img class="lesson-feedback-icon" id="feedback-icon" src="../assets/img/icon-check-circle.svg" alt="" />
+            <img class="lesson-feedback-icon" id="feedback-icon" src="../assets/img/icon-check-circle.svg" alt="" aria-hidden="true" />
             <div class="lesson-feedback-text">
               <p class="lesson-feedback-title" id="feedback-title">Great job, you did well</p>
               <p class="lesson-feedback-subtitle" id="feedback-subtitle">Keep going</p>

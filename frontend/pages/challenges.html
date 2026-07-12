@@ -12,48 +12,51 @@
 </head>
 
 <body>
+  <!-- WCAG 2.4.1 — Saltar al contenido principal -->
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
   <div class="dashboard-page">
     <header class="dashboard-header">
-      <div class="brand">
-        <div class="brand-mark">N</div>
+      <div class="brand" aria-label="Nivela">
+        <div class="brand-mark" aria-hidden="true">N</div>
         <span class="brand-name">Nivela</span>
       </div>
       <div class="header-actions">
-        <button type="button" class="header-btn">Aa</button>
-        <button type="button" class="header-btn header-btn-icon">◐</button>
-        <a href="profile.html" class="avatar-link">
-          <div class="avatar" id="header-avatar">A</div>
+        <button type="button" class="header-btn" aria-label="Cambiar tamaño de texto">Aa</button>
+        <button type="button" class="header-btn header-btn-icon" aria-label="Alternar modo oscuro/claro">◐</button>
+        <a href="profile.html" class="avatar-link" aria-label="Ver perfil de usuario">
+          <div class="avatar" id="header-avatar" aria-hidden="true">A</div>
         </a>
       </div>
     </header>
 
     <div class="dashboard-body">
-      <aside class="sidebar">
-        <nav class="nav-list">
-          <a class="nav-item" href="dashboard.html">
-            <img class="nav-icon" src="../assets/img/icon-home.svg" alt="" />
+      <aside class="sidebar" aria-label="Navegación principal">
+        <nav class="nav-list" role="navigation">
+          <a class="nav-item" href="dashboard.html" aria-label="Inicio">
+            <img class="nav-icon" src="../assets/img/icon-home.svg" alt="" aria-hidden="true" />
             <span>Home</span>
           </a>
-          <a class="nav-item is-active" href="#">
-            <img class="nav-icon" src="../assets/img/icon-sword.svg" alt="" />
+          <a class="nav-item is-active" href="#" aria-current="page" aria-label="Desafíos, página actual">
+            <img class="nav-icon" src="../assets/img/icon-sword.svg" alt="" aria-hidden="true" />
             <span>Challenges</span>
           </a>
-          <a class="nav-item" href="units.html">
-            <img class="nav-icon" src="../assets/img/icon-path.svg" alt="" />
+          <a class="nav-item" href="units.html" aria-label="Unidades">
+            <img class="nav-icon" src="../assets/img/icon-path.svg" alt="" aria-hidden="true" />
             <span>Units</span>
           </a>
-          <a class="nav-item" href="modal-accessibility.html">
-            <img class="nav-icon" src="../assets/img/icon-person.svg" alt="" />
+          <a class="nav-item" href="modal-accessibility.html" aria-label="Accesibilidad">
+            <img class="nav-icon" src="../assets/img/icon-person.svg" alt="" aria-hidden="true" />
             <span>Accesibility</span>
           </a>
         </nav>
-        <a class="nav-item nav-footer-item" href="#">
-          <img class="help-icon" src="../assets/img/icon-help.svg" alt="" />
+        <a class="nav-item nav-footer-item" href="#" aria-label="Ayuda">
+          <img class="help-icon" src="../assets/img/icon-help.svg" alt="" aria-hidden="true" />
           <span>Help</span>
         </a>
       </aside>
 
-      <main class="main-content">
+      <main class="main-content" id="main-content">
         <div class="challenges-hero">
           <h1>Challenge yourself and earn rewards!</h1>
           <div class="challenges-hero-actions">

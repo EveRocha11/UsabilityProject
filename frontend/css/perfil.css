@@ -131,6 +131,11 @@
   font-size: 11px;
   color: #5f6b3a;
 }
+/* WCAG 2.4.7 — foco visible en campos de perfil */
+.profile-input input:focus-visible {
+  outline: 2px solid var(--color-purple);
+  border-radius: 4px;
+}
 
 .profile-password-input {
   gap: 8px;

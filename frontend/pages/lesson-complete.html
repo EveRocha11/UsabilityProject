@@ -15,59 +15,61 @@
 <body>
   <div class="dashboard-page">
     <header class="dashboard-header">
-      <div class="brand">
-        <div class="brand-mark">N</div>
+      <div class="brand" aria-label="Nivela">
+        <div class="brand-mark" aria-hidden="true">N</div>
         <span class="brand-name">Nivela</span>
       </div>
       <div class="header-actions">
-        <button type="button" class="header-btn">Aa</button>
-        <button type="button" class="header-btn header-btn-icon">◐</button>
-        <div class="avatar" id="header-avatar">A</div>
+        <button type="button" class="header-btn" aria-label="Cambiar tamaño de texto">Aa</button>
+        <button type="button" class="header-btn header-btn-icon" aria-label="Alternar modo oscuro/claro">◐</button>
+        <div class="avatar" id="header-avatar" aria-hidden="true">A</div>
       </div>
     </header>
 
     <div class="dashboard-body">
-      <aside class="sidebar">
-        <nav class="nav-list">
-          <a class="nav-item" href="dashboard.html">
-            <img class="nav-icon" src="../assets/img/icon-home.svg" alt="" />
+      <aside class="sidebar" aria-label="Navegación principal">
+        <nav class="nav-list" role="navigation">
+          <a class="nav-item" href="dashboard.html" aria-label="Inicio">
+            <img class="nav-icon" src="../assets/img/icon-home.svg" alt="" aria-hidden="true" />
             <span>Home</span>
           </a>
-          <a class="nav-item is-active" href="challenges.html">
-            <img class="nav-icon" src="../assets/img/icon-sword.svg" alt="" />
+          <a class="nav-item is-active" href="challenges.html" aria-label="Desafíos">
+            <img class="nav-icon" src="../assets/img/icon-sword.svg" alt="" aria-hidden="true" />
             <span>Challenges</span>
           </a>
-          <a class="nav-item" href="units.html">
-            <img class="nav-icon" src="../assets/img/icon-path.svg" alt="" />
+          <a class="nav-item" href="units.html" aria-label="Unidades">
+            <img class="nav-icon" src="../assets/img/icon-path.svg" alt="" aria-hidden="true" />
             <span>Units</span>
           </a>
-          <a class="nav-item" href="modal-accessibility.html">
-            <img class="nav-icon" src="../assets/img/icon-person.svg" alt="" />
+          <a class="nav-item" href="modal-accessibility.html" aria-label="Accesibilidad">
+            <img class="nav-icon" src="../assets/img/icon-person.svg" alt="" aria-hidden="true" />
             <span>Accesibility</span>
           </a>
         </nav>
 
-        <a class="nav-item nav-footer-item" href="#">
-          <img class="help-icon" src="../assets/img/icon-help.svg" alt="" />
+        <a class="nav-item nav-footer-item" href="#" aria-label="Ayuda">
+          <img class="help-icon" src="../assets/img/icon-help.svg" alt="" aria-hidden="true" />
           <span>Help</span>
         </a>
       </aside>
 
-      <main class="main-content lesson-main">
+      <main class="main-content lesson-main" id="main-content">
         <div class="lesson-top-bar lesson-top-bar-end">
-          <div class="lesson-hearts">
-            <img src="../assets/img/icon-heart.svg" alt="" />
-            <span>5</span>
+          <div class="lesson-hearts" aria-label="5 corazones restantes">
+            <img src="../assets/img/icon-heart.svg" alt="" aria-hidden="true" />
+            <span aria-hidden="true">5</span>
           </div>
         </div>
 
-        <div class="lesson-complete-content">
+        <!-- WCAG 4.1.3 — role="status" anuncia la pantalla de felicitación -->
+        <div class="lesson-complete-content" role="status" aria-live="polite">
           <div class="lesson-complete-row">
             <h1 class="lesson-complete-heading">Congratulations! You've completed the level!</h1>
 
-            <div class="lesson-avatar-box lesson-avatar-box-lg">
+            <!-- WCAG 1.1.1 — avatar decorativo oculto del árbol de accesibilidad -->
+            <div class="lesson-avatar-box lesson-avatar-box-lg" aria-hidden="true">
               <div class="avatar-face avatar-face-lg">
-                <div class="avatar-vector avatar-logo-02"><img src="../assets/img/logo-02.svg" alt="Personaje" /></div>
+                <div class="avatar-vector avatar-logo-02"><img src="../assets/img/logo-02.svg" alt="" /></div>
                 <div class="avatar-vector avatar-logo-03a"><img src="../assets/img/logo-03.svg" alt="" /></div>
                 <div class="avatar-vector avatar-logo-03b"><img src="../assets/img/logo-03.svg" alt="" /></div>
                 <div class="avatar-vector avatar-logo-04a"><img src="../assets/img/logo-04.svg" alt="" /></div>
@@ -91,11 +93,12 @@
           </div>
 
           <div class="lesson-complete-actions">
-            <div class="lesson-points-card">
-              <span class="lesson-points-label">Points</span>
-              <span class="lesson-points-value">+4</span>
+            <!-- WCAG 1.3.1 — puntos como texto accesible vinculado -->
+            <div class="lesson-points-card" aria-label="Puntos obtenidos: 4">
+              <span class="lesson-points-label" aria-hidden="true">Points</span>
+              <span class="lesson-points-value" aria-hidden="true">+4</span>
             </div>
-            <button type="button" class="btn-success lesson-next-btn">NEXT</button>
+            <button type="button" class="btn-success lesson-next-btn" aria-label="Continuar a la siguiente actividad">NEXT</button>
           </div>
         </div>
       </main>

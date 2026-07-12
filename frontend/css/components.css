@@ -27,12 +27,11 @@ body {
   background-color: var(--color-bg-page);
 }
 
-/* Centered 1440px frame for auth screens */
+/* Frame para pantallas de autenticación */
 .auth-page {
   position: relative;
   background-color: var(--color-bg-page);
-  width: 1440px;
-  min-height: 900px;
+  min-height: 100vh;
   margin: 0 auto;
 }
 
@@ -166,6 +165,12 @@ body {
   color: var(--color-text-dark);
   outline: none;
   box-sizing: border-box;
+}
+/* WCAG 2.4.7 — foco visible dentro del campo */
+.field-input:focus-within {
+  outline: 2px solid var(--color-purple);
+  outline-offset: 0;
+  border-radius: var(--radius-input);
 }
 
 .field-input input::placeholder {

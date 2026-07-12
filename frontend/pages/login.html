@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -10,41 +10,53 @@
   <script src="../js/theme-init.js"></script>
 </head>
 <body>
-  <div class="element-login auth-page">
-    <div class="rectangle"></div>
+  <!-- WCAG 2.4.1 — Enlace para saltar al contenido principal -->
+  <a href="#main-content" class="skip-link">Saltar al formulario</a>
 
-    <div class="login-card auth-card">
-      <div class="field-label label-email">Email</div>
+  <div class="element-login auth-page">
+    <div class="rectangle" aria-hidden="true"></div>
+
+    <main id="main-content" class="login-card auth-card" aria-label="Formulario de inicio de sesión">
+      <!-- WCAG 1.3.1 — <label> vinculado al input mediante for/id -->
+      <label class="field-label label-email" for="login-email">Email</label>
       <div class="field-input input-email" id="wrap-email">
-        <input type="email" id="login-email" placeholder="tu@email.com" autocomplete="email" aria-label="Email" />
+        <input type="email" id="login-email" placeholder="tu@email.com"
+               autocomplete="email"
+               aria-describedby="login-hint"
+               aria-required="true" />
       </div>
 
-      <div class="field-label label-password">Password</div>
+      <label class="field-label label-password" for="login-password">Password</label>
       <div class="field-input input-password" id="wrap-password">
-        <input type="password" id="login-password" placeholder="••••••••" autocomplete="current-password" aria-label="Password" />
-        <button type="button" class="eye-icon" id="toggle-password" aria-label="Show/hide password">
-          <!-- eye open (default) -->
-          <svg class="eye-open" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#78726d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <input type="password" id="login-password" placeholder="••••••••"
+               autocomplete="current-password"
+               aria-describedby="login-hint"
+               aria-required="true" />
+        <button type="button" class="eye-icon" id="toggle-password" aria-label="Mostrar u ocultar contraseña">
+          <svg class="eye-open" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#78726d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
             <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
             <circle cx="12" cy="12" r="3"/>
           </svg>
-          <!-- eye closed (hidden until toggled) -->
-          <svg class="eye-closed" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#78726d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none">
+          <svg class="eye-closed" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#78726d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none" aria-hidden="true" focusable="false">
             <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
             <line x1="1" y1="1" x2="23" y2="23"/>
           </svg>
         </button>
       </div>
-      <p class="field-hint hint">Minimum 8 characters, one uppercase letter, and one number</p>
+      <!-- WCAG 4.1.3 — región con aria-live para anunciar errores de validación -->
+      <p id="login-hint" class="field-hint hint" aria-live="polite" role="status">
+        Minimum 8 characters, one uppercase letter, and one number
+      </p>
 
       <a class="link-accent forgot-password" href="#">Forgot your password?</a>
 
       <button type="button" class="btn-primary cta-sign-in"><span>Sign in</span></button>
 
       <p class="text-secondary sign-up-link">Don't have an account? <a href="signup.html">Sign up</a></p>
-    </div>
+    </main>
 
-    <div class="login-logo">
+    <!-- WCAG 1.1.1 — imágenes decorativas con alt="" y aria-hidden -->
+    <div class="login-logo" aria-hidden="true">
       <div class="logo-vector logo-01"><img src="../assets/img/logo-01.svg" alt="" /></div>
       <div class="logo-vector logo-02"><img src="../assets/img/logo-02.svg" alt="" /></div>
       <div class="logo-vector logo-03a"><img src="../assets/img/logo-03.svg" alt="" /></div>
