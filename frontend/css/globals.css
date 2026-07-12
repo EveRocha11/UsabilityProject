@@ -98,8 +98,7 @@ img {
 .auth-page {
   position: relative;
   width: 100%;
-  min-width: 1440px;
-  min-height: 900px;
+  min-height: 100vh;
   background-color: var(--color-bg-page);
 }
 
@@ -202,8 +201,7 @@ img {
 
 .dashboard-page {
   width: 100%;
-  min-width: 1440px;
-  min-height: 900px;
+  min-height: 100vh;
   margin: 0 auto;
   background-color: var(--color-bg-app);
   font-family: var(--font-regular);
@@ -285,7 +283,7 @@ img {
 .dashboard-body {
   display: flex;
   align-items: stretch;
-  min-height: calc(900px - 72px);
+  min-height: calc(100vh - 72px);
 }
 
 .sidebar {
@@ -345,6 +343,7 @@ img {
 
 .main-content {
   flex: 1;
+  min-width: 0;
   padding: 32px;
 }
 
