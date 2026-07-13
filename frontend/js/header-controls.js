@@ -37,6 +37,13 @@
       });
     }
 
+    /* ── Avatar/profile link accessible name (WCAG 3.1.2) ─────── */
+    const avatarLink = document.querySelector('.avatar-link');
+    if (avatarLink) {
+      avatarLink.setAttribute('aria-label', 'View profile');
+      avatarLink.title = 'View profile';
+    }
+
     /* ── Dynamic avatar initial ────────────────────────────────── */
     const currentEmail = localStorage.getItem('nivela_current_email');
     if (currentEmail) {
@@ -52,10 +59,7 @@
     injectA11yModal();
 
     /* ── Help link → open modal ────────────────────────────────── */
-    document.querySelectorAll('.nav-footer-item').forEach(el => {
-      el.setAttribute('href', '#');
-      el.addEventListener('click', e => { e.preventDefault(); openA11yModal(); });
-    });
+  
 
     /* ── Accessibility sidebar link → open modal ───────────────── */
     document.querySelectorAll('a[href="modal-accessibility.html"]').forEach(el => {

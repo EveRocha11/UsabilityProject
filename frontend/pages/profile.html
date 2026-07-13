@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
   <meta charset="utf-8" />
@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/dashboard.css">
   <link rel="stylesheet" href="../css/perfil.css">
+  <link rel="stylesheet" href="../css/modal-support.css">
 </head>
 
 <body>
@@ -49,7 +50,7 @@
           </a>
         </nav>
 
-        <a class="nav-item nav-footer-item" href="#" aria-label="Ayuda">
+        <a class="nav-item nav-footer-item" href="modal-support.html" aria-label="Ayuda">
           <img class="help-icon" src="../assets/img/icon-help.svg" alt="" aria-hidden="true" />
           <span>Help</span>
         </a>
@@ -65,7 +66,7 @@
         </section>
 
         <section class="profile-card" aria-label="Datos del perfil">
-          <button type="button" class="profile-edit-btn" aria-label="Editar perfil">
+          <button type="button" class="profile-edit-btn" aria-label="Edit profile">
             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
               <path
                 d="M3 17.25V21h3.75L18.81 8.94l-3.75-3.75L3 17.25zm2.92 2.83H5v-.92l9.06-9.06.92.92L5.92 20.08zM20.71 7.04a1 1 0 0 0 0-1.42L18.38 3.29a1 1 0 0 0-1.42 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
@@ -92,15 +93,15 @@
               <label class="profile-label" for="profile-password">PASSWORD</label>
               <div class="profile-input profile-password-input">
                 <input type="password" id="profile-password" value="12345678" readonly />
-                <button type="button" class="profile-password-toggle" aria-label="Mostrar u ocultar contraseña">
+                <button type="button" class="profile-password-toggle" aria-label="Show or hide password">
                   <img src="../assets/img/eye-slash.svg" alt="" aria-hidden="true" />
                 </button>
               </div>
             </div>
 
             <div class="profile-actions">
-              <button type="button" class="profile-action-primary" aria-label="Confirmar cambios de perfil">CONFIRM</button>
-              <button type="button" class="profile-action-secondary" aria-label="Cancelar cambios de perfil">CANCEL</button>
+              <button type="button" class="profile-action-primary" aria-label="Confirm profile changes">CONFIRM</button>
+              <button type="button" class="profile-action-secondary" aria-label="Cancel profile changes">CANCEL</button>
             </div>
           </div>
         </section>
@@ -146,6 +147,7 @@
 
   <script src="../js/header-controls.js"></script>
   <script src="../js/profile.js"></script>
+  <script src="../js/modal-support.js"></script>
 </body>
 
 </html>
