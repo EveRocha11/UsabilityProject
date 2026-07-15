@@ -111,7 +111,8 @@
         <h2 class="section-title" style="display:none">Lecciones actuales</h2>
 
         <div class="levels-row" role="list" aria-label="Lecciones de la unidad actual">
-          <div class="level-card is-complete" role="listitem">
+          <!-- WCAG 2.1.1 — tarjetas clicables convertidas en botones alcanzables con Tab -->
+          <div class="level-card is-complete" role="button" tabindex="0">
             <div class="level-top">
               <span class="level-badge" aria-hidden="true">I2</span>
               <img class="level-status-icon" src="../assets/img/icon-check.svg" alt="Completada" />
@@ -121,7 +122,7 @@
             <div class="level-lesson">Present Perfect — ever, never, already, yet</div>
           </div>
 
-          <div class="level-card" role="listitem">
+          <div class="level-card" role="button" tabindex="0">
             <div class="level-top">
               <span class="level-badge" aria-hidden="true">I2</span>
             </div>
@@ -130,7 +131,7 @@
             <div class="level-lesson">Past Simple + Past Continuous — when &amp; while</div>
           </div>
 
-          <div class="level-card is-locked" role="listitem">
+          <div class="level-card is-locked" role="button" tabindex="0">
             <div class="level-top">
               <span class="level-badge" aria-hidden="true">I2</span>
               <img class="level-status-icon" src="../assets/img/icon-padlock.svg" alt="Bloqueada" />
@@ -160,7 +161,7 @@
             </div>
             <div class="challenge-meta" id="challenge-meta">3 lessons · ~ 30 min</div>
           </div>
-          <button type="button" class="btn-success" id="daily-challenge-start" aria-label="Iniciar desafío diario">START</button>
+          <button type="button" class="btn-success" id="daily-challenge-start" aria-label="Start daily challenge">START</button>
         </div>
 
         <h2 class="section-title">Weekly challenge</h2>
@@ -182,7 +183,7 @@
             </div>
             <div class="challenge-meta" id="weekly-challenge-meta">3 levels · ~ 1.5 hrs</div>
           </div>
-          <button type="button" class="btn-purple" id="weekly-challenge-start" aria-label="Iniciar desafío semanal">START</button>
+          <button type="button" class="btn-purple" id="weekly-challenge-start" aria-label="Start weekly challenge">START</button>
         </div>
       </main>
     </div>

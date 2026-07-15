@@ -72,6 +72,7 @@
   font-weight: 700;
   font-size: 16px;
   color: var(--color-text-dark);
+  margin: 1em 0;
 }
 
 .lesson-avatar-box {

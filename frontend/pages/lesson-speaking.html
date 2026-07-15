@@ -14,6 +14,9 @@
 </head>
 
 <body>
+  <!-- WCAG 2.4.1 — Saltar al contenido principal -->
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
   <div class="dashboard-page">
     <header class="dashboard-header">
       <div class="brand" aria-label="Nivela">
@@ -74,7 +77,7 @@
         </div>
 
         <div class="lesson-exercise">
-          <p class="lesson-instruction">Repeat this sentence</p>
+          <h1 class="lesson-instruction">Repeat this sentence</h1>
 
           <div class="lesson-exercise-row">
             <div class="lesson-avatar-box">
@@ -103,9 +106,9 @@
 
             <div class="lesson-sentence-col">
               <div class="lesson-sentence-row">
-                <!-- WCAG 1.1.1 — ícono de altavoz con texto alternativo descriptivo -->
+                <!-- WCAG 1.1.1 / 2.1.1 — ícono de altavoz con alt descriptivo y alcanzable por teclado -->
                 <img class="lesson-speaker-icon" id="speaker-icon" src="../assets/img/icon-speaker.svg"
-                  alt="Escuchar la oración en voz alta" />
+                  alt="Escuchar la oración en voz alta" role="button" tabindex="0" />
                 <!-- WCAG 3.1.2 — contenido en inglés marcado con lang="en" -->
                 <div class="lesson-sentence-bubble" id="sentence-bubble" lang="en">Her first name is Anna, nice to meet you.</div>
               </div>

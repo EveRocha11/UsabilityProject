@@ -202,7 +202,7 @@
   // Click handlers
   cards.forEach((card, i) => {
     card.style.cursor = 'pointer';
-    card.addEventListener('click', () => {
+    const activateCard = () => {
       if (card.classList.contains('is-locked')) {
         showLockedToast();
       } else {
@@ -217,6 +217,11 @@
         localStorage.setItem('nivela_lesson_wrongs',  '0');
         globalThis.location.href = 'lesson-match.html';
       }
+    };
+    card.addEventListener('click', activateCard);
+    // WCAG 2.1.1 — la tarjeta es un div con role="button", necesita respuesta a Enter/Espacio
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activateCard(); }
     });
   });
 
