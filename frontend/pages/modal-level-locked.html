@@ -1,19 +1,68 @@
-<!DOCTYPE html>
-<html lang="es">
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta charset="utf-8" />
-  <title>Nivela - Nivel bloqueado</title>
+  <title>Nivela - Content Locked</title>
   <link rel="stylesheet" href="../css/globals.css">
   <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/modal-level-locked.css">
+  <script src="../js/theme-init.js"></script>
 </head>
 <body>
-  <div class="level-locked-page">
+
+  <main class="level-locked-page"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="locked-title">
+
     <div class="level-locked-content">
-      <p class="level-locked-text">To access this level, you must first complete Unit Route 1.</p>
-      <button type="button" class="level-locked-btn">BACK</button>
+      <p id="locked-title" class="level-locked-text">
+        <!-- Filled by script -->
+      </p>
+      <button id="back-btn"
+              type="button"
+              class="level-locked-btn"
+              aria-label="Go back to previous page">
+        BACK
+      </button>
     </div>
-  </div>
+
+  </main>
+
+  <script>
+    (function () {
+      /* Build contextual message from URL params:
+         ?type=lesson&prev=1   → complete lesson 1 first
+         ?type=unit&prev=1     → complete unit 1 first       */
+      var params = new URLSearchParams(location.search);
+      var type   = params.get('type') || 'lesson';
+      var prev   = params.get('prev') || '1';
+
+      var msg = type === 'unit'
+        ? 'To access this unit, you must first complete Unit ' + prev + '.'
+        : 'To access this lesson, you must first complete Lesson ' + prev + '.';
+
+      document.getElementById('locked-title').textContent = msg;
+
+      /* BACK button */
+      document.getElementById('back-btn').addEventListener('click', function () {
+        if (history.length > 1) { history.back(); }
+        else { location.href = 'units.html'; }
+      });
+
+      /* ESC also closes */
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          if (history.length > 1) { history.back(); }
+          else { location.href = 'units.html'; }
+        }
+      });
+
+      /* Move focus to button so screen reader announces the message */
+      document.getElementById('back-btn').focus();
+    }());
+  </script>
+
 </body>
 </html>

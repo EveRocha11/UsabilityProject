@@ -41,6 +41,14 @@
   background-color: var(--color-purple-track);
 }
 
+/* Dale un borde o un cambio sutil para que resalte como pestaña activa */
+.profile-avatar-active {
+  outline: 3px solid var(--color-purple);
+  /* Cambia por el color morado de tu app */
+  outline-offset: 2px;
+  box-shadow: var(--shadow-card);
+}
+
 .profile-card {
   position: relative;
   width: min(100%, 424px);
@@ -59,9 +67,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 18px;
-  height: 18px;
-  padding: 0;
+  width: 24px;
+  height: 24px;
+  padding: 3px;
   border: none;
   background: transparent;
   color: var(--color-accent);
@@ -123,6 +131,11 @@
   font-size: 11px;
   color: #5f6b3a;
 }
+/* WCAG 2.4.7 — foco visible en campos de perfil */
+.profile-input input:focus-visible {
+  outline: 2px solid var(--color-purple);
+  border-radius: 4px;
+}
 
 .profile-password-input {
   gap: 8px;
@@ -146,11 +159,15 @@
 }
 
 .profile-actions {
-  display: flex;
+  display: none !important;
   align-items: center;
   justify-content: center;
   gap: 10px;
   margin-top: 2px;
+}
+
+.profile-edit-page .profile-actions {
+  display: flex !important;
 }
 
 .profile-action-primary,
@@ -178,6 +195,26 @@
   justify-content: center;
   gap: 26px;
   width: 100%;
+}
+
+/* Hover y cursor para el lápiz de editar */
+.profile-edit-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/* Botón CONFIRM (Verde): Oscurece un poco al pasar por encima */
+.profile-action-primary:hover {
+  background-color: #5da300;
+  /* Un tono un poco más oscuro que el éxito base */
+  cursor: pointer;
+}
+
+/* Botón CANCEL (Rojo/Naranja): Oscurece un poco al pasar por encima */
+.profile-action-secondary:hover {
+  background-color: #c82333;
+  /* Ajusta según tu color exacto de var(--color-accent) */
+  cursor: pointer;
 }
 
 .current-unit-card {

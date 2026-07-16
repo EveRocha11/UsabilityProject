@@ -23,8 +23,15 @@
     }));
   }
 
-  const setError = (wrap) => wrap.classList.add('is-error');
-  const clearError = (wrap) => wrap.classList.remove('is-error');
+  // WCAG 4.1.3 — aria-invalid comunica el error a tecnologías asistivas
+  const setError = (wrap, inp) => {
+    wrap.classList.add('is-error');
+    if (inp) inp.setAttribute('aria-invalid', 'true');
+  };
+  const clearError = (wrap, inp) => {
+    wrap.classList.remove('is-error');
+    if (inp) inp.setAttribute('aria-invalid', 'false');
+  };
 
   const showMsg = (msg, isError = true) => {
     hintEl.textContent = msg;
@@ -45,8 +52,8 @@
     toggleBtn.querySelector('.eye-closed').style.display = isText ? 'none'  : 'block';
   });
 
-  emailInput.addEventListener('input', ()    => { clearError(wrapEmail);    resetHint(); updateBtn(); });
-  passwordInput.addEventListener('input', () => { clearError(wrapPassword); resetHint(); updateBtn(); });
+  emailInput.addEventListener('input', ()    => { clearError(wrapEmail, emailInput);       resetHint(); updateBtn(); });
+  passwordInput.addEventListener('input', () => { clearError(wrapPassword, passwordInput); resetHint(); updateBtn(); });
 
   signInBtn.addEventListener('click', () => {
     const email    = emailInput.value.trim();
@@ -54,18 +61,21 @@
 
     // Validate fields one at a time, show specific message in hint area
     if (!email) {
-      setError(wrapEmail);
+      setError(wrapEmail, emailInput);
       showMsg('Please enter your email address.');
+      emailInput.focus();
       return;
     }
     if (!validateEmail(email)) {
-      setError(wrapEmail);
+      setError(wrapEmail, emailInput);
       showMsg('Please enter a valid email address.');
+      emailInput.focus();
       return;
     }
     if (!password) {
-      setError(wrapPassword);
+      setError(wrapPassword, passwordInput);
       showMsg('Please enter your password.');
+      passwordInput.focus();
       return;
     }
 
@@ -73,9 +83,10 @@
     const match  = stored.find(a => a.email === email && a.password === password);
 
     if (!match) {
-      setError(wrapEmail);
-      setError(wrapPassword);
+      setError(wrapEmail, emailInput);
+      setError(wrapPassword, passwordInput);
       showMsg('Incorrect email or password. Please try again.');
+      emailInput.focus();
       return;
     }
 

@@ -1,67 +1,77 @@
+/* Page = dark backdrop covering the full viewport */
 .exit-modal-page {
-  position: relative;
-  width: 100%;
-  min-width: 940px;
-  min-height: 660px;
-  background-color: var(--color-surface);
-}
-
-.exit-modal-close {
-  position: absolute;
-  top: 32px;
-  right: 32px;
+  position: fixed;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* Content card */
+.exit-modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--color-surface);
+  border-radius: 20px;
+  padding: 48px 56px 40px;
+  max-width: 520px;
+  width: 90%;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.35);
+}
+
+/* × close button — top-right of the card */
+.exit-modal-close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
   border: none;
   border-radius: 50%;
   background-color: var(--color-accent);
   color: var(--color-surface);
   font-family: var(--font-regular);
-  font-size: 26px;
+  font-size: 22px;
   line-height: 1;
+  cursor: pointer;
 }
-
-.exit-modal-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding-top: 230px;
-}
+.exit-modal-close:hover { opacity: 0.85; }
 
 .exit-modal-text {
-  max-width: 400px;
+  max-width: 380px;
   font-family: var(--font-semibold);
   font-weight: 600;
-  font-size: 28px;
-  line-height: 1.3;
+  font-size: 22px;
+  line-height: 1.4;
   text-align: center;
   color: var(--color-text-dark);
+  margin-top: 16px;
 }
 
 .exit-modal-actions {
   display: flex;
   gap: 16px;
-  margin-top: 64px;
+  margin-top: 40px;
 }
 
 .exit-modal-btn {
-  padding: 14px 28px;
+  padding: 14px 32px;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   font-family: var(--font-bold);
   font-weight: 700;
   font-size: 15px;
   color: var(--color-surface);
+  cursor: pointer;
 }
+.exit-modal-btn:hover { opacity: 0.88; }
 
-.exit-modal-btn-confirm {
-  background-color: var(--color-success);
-}
-
-.exit-modal-btn-cancel {
-  background-color: var(--color-accent);
-}
+.exit-modal-btn-confirm { background-color: var(--color-success); }
+.exit-modal-btn-cancel  { background-color: var(--color-accent); }

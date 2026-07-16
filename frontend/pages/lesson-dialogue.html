@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
+﻿<!DOCTYPE html>
+<html lang="en">
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta charset="utf-8" />
@@ -8,58 +9,69 @@
   <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/dashboard.css">
   <link rel="stylesheet" href="../css/lesson.css">
+  <link rel="stylesheet" href="../css/modal-support.css">
+  <script src="../js/theme-init.js"></script>
 </head>
+
 <body>
+  <!-- WCAG 2.4.1 — Saltar al contenido principal -->
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
   <div class="dashboard-page">
     <header class="dashboard-header">
-      <div class="brand">
-        <div class="brand-mark">N</div>
+      <div class="brand" aria-label="Nivela">
+        <div class="brand-mark" aria-hidden="true">N</div>
         <span class="brand-name">Nivela</span>
       </div>
       <div class="header-actions">
-        <button type="button" class="header-btn">Aa</button>
-        <button type="button" class="header-btn header-btn-icon">◐</button>
-        <div class="avatar" id="header-avatar">A</div>
+        <button type="button" class="header-btn" aria-label="Cambiar tamaño de texto">Aa</button>
+        <button type="button" class="header-btn header-btn-icon" aria-label="Alternar modo oscuro/claro">◐</button>
+        <div class="avatar" id="header-avatar" aria-hidden="true">A</div>
       </div>
     </header>
 
     <div class="dashboard-body">
-      <aside class="sidebar">
-        <nav class="nav-list">
-          <a class="nav-item is-active" href="dashboard.html">
-            <img class="nav-icon" src="../assets/img/icon-home.svg" alt="" />
+      <aside class="sidebar" aria-label="Navegación principal">
+        <nav class="nav-list" role="navigation">
+          <a class="nav-item is-active" href="dashboard.html" aria-label="Inicio">
+            <img class="nav-icon" src="../assets/img/icon-home.svg" alt="" aria-hidden="true" />
             <span>Home</span>
           </a>
-          <a class="nav-item" href="challenges.html">
-            <img class="nav-icon" src="../assets/img/icon-sword.svg" alt="" />
+          <a class="nav-item" href="challenges.html" aria-label="Desafíos">
+            <img class="nav-icon" src="../assets/img/icon-sword.svg" alt="" aria-hidden="true" />
             <span>Challenges</span>
           </a>
-          <a class="nav-item" href="units.html">
-            <img class="nav-icon" src="../assets/img/icon-path.svg" alt="" />
+          <a class="nav-item" href="units.html" aria-label="Unidades">
+            <img class="nav-icon" src="../assets/img/icon-path.svg" alt="" aria-hidden="true" />
             <span>Units</span>
           </a>
-          <a class="nav-item" href="modal-accessibility.html">
-            <img class="nav-icon" src="../assets/img/icon-person.svg" alt="" />
+          <a class="nav-item" href="modal-accessibility.html" aria-label="Accesibilidad">
+            <img class="nav-icon" src="../assets/img/icon-person.svg" alt="" aria-hidden="true" />
             <span>Accesibility</span>
           </a>
         </nav>
-        <a class="nav-item nav-footer-item" href="#">
-          <img class="help-icon" src="../assets/img/icon-help.svg" alt="" />
+        <a class="nav-item nav-footer-item" href="modal-support.html" aria-label="Ayuda">
+          <img class="help-icon" src="../assets/img/icon-help.svg" alt="" aria-hidden="true" />
           <span>Help</span>
         </a>
       </aside>
 
-      <main class="main-content lesson-main">
+      <main class="main-content lesson-main" id="main-content">
         <div class="lesson-top-bar">
-          <button type="button" class="lesson-close" id="close-btn" aria-label="Close">
-            <img src="../assets/img/icon-close.svg" alt="" />
+          <button type="button" class="lesson-close" id="close-btn" aria-label="Salir de la lección">
+            <img src="../assets/img/icon-close.svg" alt="" aria-hidden="true" />
           </button>
-          <div class="progress-track lesson-progress-track">
+          <div class="progress-track lesson-progress-track"
+               role="progressbar"
+               aria-valuenow="66"
+               aria-valuemin="0"
+               aria-valuemax="100"
+               aria-label="Progreso de la lección">
             <div class="progress-fill" id="lesson-progress-fill" style="width: 66%"></div>
           </div>
-          <div class="lesson-hearts">
-            <img src="../assets/img/icon-heart.svg" alt="" />
-            <span>5</span>
+          <div class="lesson-hearts" aria-label="5 corazones restantes">
+            <img src="../assets/img/icon-heart.svg" alt="" aria-hidden="true" />
+            <span aria-hidden="true">5</span>
           </div>
         </div>
 
@@ -69,7 +81,8 @@
         <!-- Dialogue exercise -->
         <div class="lesson-exercise dialogue-exercise">
           <div class="dialogue-header">
-            <p class="lesson-instruction" id="dialogue-instruction">Complete the conversation by choosing the correct options.</p>
+            <h1 class="lesson-instruction" id="dialogue-instruction">Complete the conversation by choosing the correct
+              options.</h1>
             <div class="dialogue-chars-row" id="dialogue-chars-row"></div>
           </div>
 
@@ -92,5 +105,7 @@
 
   <script src="../js/exercises-data.js"></script>
   <script src="../js/lesson-dialogue.js"></script>
+  <script src="../js/modal-support.js"></script>
 </body>
+
 </html>

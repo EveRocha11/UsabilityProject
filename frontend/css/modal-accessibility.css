@@ -109,7 +109,9 @@
   width: 76px;
   height: 34px;
   padding: 0 8px;
+  border: none;
   border-radius: 99px;
+  cursor: pointer;
 }
 
 .toggle-switch.is-on {
@@ -121,14 +123,16 @@
   background-color: #d9d9d9;
 }
 
-.toggle-text {
+.toggle-text,
+.toggle-label {
   font-family: var(--font-bold);
   font-weight: 700;
   font-size: 12px;
   color: #ffffff;
 }
 
-.toggle-switch.is-off .toggle-text {
+.toggle-switch.is-off .toggle-text,
+.toggle-switch.is-off .toggle-label {
   color: #000000;
 }
 
@@ -141,9 +145,16 @@
 
 /* Keyboard shortcuts table */
 .shortcuts-table {
+  display: block;
+  width: 100%;
   border: 2px solid #000000;
   border-radius: 13px;
   overflow: hidden;
+}
+
+.shortcuts-table thead,
+.shortcuts-table tbody {
+  display: block;
 }
 
 .shortcuts-row {
@@ -155,22 +166,32 @@
   border-top: 1px solid #000000;
 }
 
-.shortcuts-row span {
+.shortcuts-row span,
+.shortcuts-row td,
+.shortcuts-row th {
+  display: block;
   padding: 14px 20px;
   font-family: var(--font-regular);
   font-weight: 400;
   font-size: 14px;
   color: #000000;
+  text-align: left;
 }
 
 .shortcuts-row.is-header {
   background-color: var(--color-purple, #7c3aed);
 }
 
-.shortcuts-row.is-header span {
+.shortcuts-row.is-header span,
+.shortcuts-row.is-header th {
   font-family: var(--font-bold);
   font-weight: 700;
   color: #ffffff;
+}
+
+kbd {
+  font-family: var(--font-bold);
+  font-size: 13px;
 }
 
 /* Footer */

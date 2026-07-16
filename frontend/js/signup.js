@@ -21,25 +21,30 @@
   const togglePassword = document.getElementById('toggle-password');
   const toggleConfirm  = document.getElementById('toggle-confirm');
 
-  const setError = (wrap, errSpan, msg) => {
+  // WCAG 4.1.3 — aria-invalid comunica errores a tecnologías asistivas
+  const setError = (wrap, errSpan, msg, inp) => {
     wrap.classList.add('is-error');
     errSpan.textContent = msg;
     errSpan.classList.add('visible');
+    if (inp) inp.setAttribute('aria-invalid', 'true');
   };
 
-  const clearError = (wrap, errSpan) => {
+  const clearError = (wrap, errSpan, inp) => {
     wrap.classList.remove('is-error');
     errSpan.classList.remove('visible');
+    if (inp) inp.setAttribute('aria-invalid', 'false');
   };
 
   const setPasswordError = () => {
     wrapPassword.classList.add('is-error');
     passwordHint.style.color = '#ef4444';
+    passwordInput.setAttribute('aria-invalid', 'true');
   };
 
   const clearPasswordError = () => {
     wrapPassword.classList.remove('is-error');
     passwordHint.style.color = '';
+    passwordInput.setAttribute('aria-invalid', 'false');
   };
 
   const validateEmail    = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -74,7 +79,7 @@
     [confirmInput,  wrapConfirm,  errConfirm],
   ];
   pairs.forEach(([inp, wrap, err]) => {
-    inp.addEventListener('input', () => { clearError(wrap, err); updateBtn(); });
+    inp.addEventListener('input', () => { clearError(wrap, err, inp); updateBtn(); });
   });
   passwordInput.addEventListener('input', () => { clearPasswordError(); updateBtn(); });
 
@@ -82,30 +87,30 @@
     let valid = true;
 
     if (!nameInput.value.trim()) {
-      setError(wrapName, errName, 'Name is required'); valid = false;
+      setError(wrapName, errName, 'Name is required', nameInput); valid = false;
     }
     if (!lastnameInput.value.trim()) {
-      setError(wrapLastname, errLastname, 'Lastname is required'); valid = false;
+      setError(wrapLastname, errLastname, 'Lastname is required', lastnameInput); valid = false;
     }
     if (!emailInput.value.trim()) {
-      setError(wrapEmail, errEmail, 'Email is required'); valid = false;
+      setError(wrapEmail, errEmail, 'Email is required', emailInput); valid = false;
     } else if (!validateEmail(emailInput.value.trim())) {
-      setError(wrapEmail, errEmail, 'Enter a valid email address'); valid = false;
+      setError(wrapEmail, errEmail, 'Enter a valid email address', emailInput); valid = false;
     }
     if (!passwordInput.value || !validatePassword(passwordInput.value)) {
       setPasswordError(); valid = false;
     }
     if (!confirmInput.value) {
-      setError(wrapConfirm, errConfirm, 'Please confirm your password'); valid = false;
+      setError(wrapConfirm, errConfirm, 'Please confirm your password', confirmInput); valid = false;
     } else if (confirmInput.value !== passwordInput.value) {
-      setError(wrapConfirm, errConfirm, 'Passwords do not match'); valid = false;
+      setError(wrapConfirm, errConfirm, 'Passwords do not match', confirmInput); valid = false;
     }
 
     if (!valid) return;
 
     const accounts = JSON.parse(localStorage.getItem('nivela_accounts') || '[]');
     if (accounts.some(a => a.email === emailInput.value.trim())) {
-      setError(wrapEmail, errEmail, 'This email is already registered'); return;
+      setError(wrapEmail, errEmail, 'This email is already registered', emailInput); return;
     }
 
     accounts.push({

@@ -1,38 +1,47 @@
+/* Page = dark backdrop */
 .level-locked-page {
-  position: relative;
+  position: fixed;
+  inset: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  min-width: 940px;
-  min-height: 660px;
-  background-color: var(--color-surface);
+  min-height: 100vh;
+  background: rgba(0, 0, 0, 0.55);
 }
 
+/* Card */
 .level-locked-content {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: var(--color-surface);
+  border-radius: 20px;
+  padding: 56px 56px 48px;
   max-width: 480px;
+  width: 90%;
   text-align: center;
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.35);
 }
 
 .level-locked-text {
   margin-bottom: 40px;
   font-family: var(--font-bold);
   font-weight: 700;
-  font-size: 34px;
-  line-height: 1.3;
+  font-size: 28px;
+  line-height: 1.35;
   color: var(--color-text-dark);
 }
 
 .level-locked-btn {
-  padding: 18px 56px;
+  padding: 16px 52px;
   border: none;
-  border-radius: 20px;
+  border-radius: 16px;
   background-color: var(--color-purple);
   font-family: var(--font-bold);
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
   color: var(--color-surface);
+  cursor: pointer;
 }
+.level-locked-btn:hover { opacity: 0.88; }

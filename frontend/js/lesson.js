@@ -81,13 +81,18 @@
   }
 
   // Speaker icon: TTS via Web Speech API
-  speakerIcon.addEventListener('click', () => {
+  function playSentenceTTS() {
     if ('speechSynthesis' in globalThis) {
       globalThis.speechSynthesis.cancel();
       const utt = new SpeechSynthesisUtterance(EXERCISES[current]);
       utt.lang = 'en-US';
       globalThis.speechSynthesis.speak(utt);
     }
+  }
+  speakerIcon.addEventListener('click', playSentenceTTS);
+  // WCAG 2.1.1 — el ícono tiene role="button"/tabindex="0", necesita respuesta a Enter/Espacio
+  speakerIcon.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); playSentenceTTS(); }
   });
 
   // Mic button: simulate recording cycle

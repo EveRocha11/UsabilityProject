@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,108 +9,121 @@
   <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/dashboard.css">
   <link rel="stylesheet" href="../css/perfil.css">
+  <link rel="stylesheet" href="../css/modal-support.css">
 </head>
+
 <body>
+  <!-- WCAG 2.4.1 — Saltar al contenido principal -->
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
   <div class="dashboard-page perfil-page">
     <header class="dashboard-header">
-      <div class="brand">
-        <div class="brand-mark">N</div>
+      <div class="brand" aria-label="Nivela">
+        <div class="brand-mark" aria-hidden="true">N</div>
         <span class="brand-name">Nivela</span>
       </div>
       <div class="header-actions">
-        <button type="button" class="header-btn">Aa</button>
-        <button type="button" class="header-btn header-btn-icon">◐</button>
-        <div class="avatar">A</div>
+        <button type="button" class="header-btn" aria-label="Cambiar tamaño de texto">Aa</button>
+        <button type="button" class="header-btn header-btn-icon" aria-label="Alternar modo oscuro/claro">◐</button>
+        <div class="avatar profile-avatar-active" aria-hidden="true">A</div>
       </div>
     </header>
 
     <div class="dashboard-body">
-      <aside class="sidebar">
-        <nav class="nav-list">
-          <a class="nav-item" href="dashboard.html">
-            <img class="nav-icon" src="../assets/img/icon-home.svg" alt="" />
+      <aside class="sidebar" aria-label="Navegación principal">
+        <nav class="nav-list" role="navigation">
+          <a class="nav-item" href="dashboard.html" aria-label="Inicio">
+            <img class="nav-icon" src="../assets/img/icon-home.svg" alt="" aria-hidden="true" />
             <span>Home</span>
           </a>
-          <a class="nav-item" href="challenges.html">
-            <img class="nav-icon" src="../assets/img/icon-sword.svg" alt="" />
+          <a class="nav-item" href="challenges.html" aria-label="Desafíos">
+            <img class="nav-icon" src="../assets/img/icon-sword.svg" alt="" aria-hidden="true" />
             <span>Challenges</span>
           </a>
-          <a class="nav-item" href="units.html">
-            <img class="nav-icon" src="../assets/img/icon-path.svg" alt="" />
+          <a class="nav-item" href="units.html" aria-label="Unidades">
+            <img class="nav-icon" src="../assets/img/icon-path.svg" alt="" aria-hidden="true" />
             <span>Units</span>
           </a>
-          <a class="nav-item is-active" href="#">
-            <img class="nav-icon" src="../assets/img/icon-person.svg" alt="" />
+          <a class="nav-item" href="modal-accessibility.html" aria-label="Accesibilidad">
+            <img class="nav-icon" src="../assets/img/icon-person.svg" alt="" aria-hidden="true" />
             <span>Accesibility</span>
           </a>
         </nav>
 
-        <a class="nav-item nav-footer-item" href="#">
-          <img class="help-icon" src="../assets/img/icon-help.svg" alt="" />
+        <a class="nav-item nav-footer-item" href="modal-support.html" aria-label="Ayuda">
+          <img class="help-icon" src="../assets/img/icon-help.svg" alt="" aria-hidden="true" />
           <span>Help</span>
         </a>
       </aside>
 
-      <main class="main-content perfil-main">
+      <main class="main-content perfil-main" id="main-content">
         <h1 class="perfil-title">User profile</h1>
 
-        <section class="profile-photo-panel" aria-label="Profile photo">
+        <section class="profile-photo-panel" aria-label="Foto de perfil">
           <div class="profile-photo-frame">
-            <img class="profile-photo" src="../assets/img/icon-avatar-placeholder.svg" alt="User profile photo" />
+            <img class="profile-photo" src="../assets/img/icon-avatar-placeholder.svg" alt="Foto de perfil del usuario" />
           </div>
         </section>
 
-        <section class="profile-card" aria-label="Profile details">
+        <section class="profile-card" aria-label="Datos del perfil">
           <button type="button" class="profile-edit-btn" aria-label="Edit profile">
             <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
-              <path d="M3 17.25V21h3.75L18.81 8.94l-3.75-3.75L3 17.25zm2.92 2.83H5v-.92l9.06-9.06.92.92L5.92 20.08zM20.71 7.04a1 1 0 0 0 0-1.42L18.38 3.29a1 1 0 0 0-1.42 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+              <path
+                d="M3 17.25V21h3.75L18.81 8.94l-3.75-3.75L3 17.25zm2.92 2.83H5v-.92l9.06-9.06.92.92L5.92 20.08zM20.71 7.04a1 1 0 0 0 0-1.42L18.38 3.29a1 1 0 0 0-1.42 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
             </svg>
           </button>
 
+          <!-- WCAG 1.3.1 — <label> vinculados a sus inputs mediante for/id -->
           <div class="profile-form">
             <div class="profile-field-row">
-              <div class="profile-label">NAME</div>
+              <label class="profile-label" for="profile-name">NAME</label>
               <div class="profile-input">
-                <input type="text" value="Ana" readonly aria-label="Name" />
-              </div>
-            </div>
-
-            <div class="profile-field-row" readonly>
-              <div class="profile-label">EMAIL</div>
-              <div class="profile-input">
-                <input type="email" value="ana@gmail.com" readonly aria-label="Email" />
+                <input type="text" id="profile-name" value="Ana" readonly />
               </div>
             </div>
 
             <div class="profile-field-row">
-              <div class="profile-label">PASSWORD</div>
+              <label class="profile-label" for="profile-email">EMAIL</label>
+              <div class="profile-input">
+                <input type="email" id="profile-email" value="ana@gmail.com" readonly />
+              </div>
+            </div>
+
+            <div class="profile-field-row">
+              <label class="profile-label" for="profile-password">PASSWORD</label>
               <div class="profile-input profile-password-input">
-                <input type="password" value="password" readonly aria-label="Password" />
+                <input type="password" id="profile-password" value="12345678" readonly />
                 <button type="button" class="profile-password-toggle" aria-label="Show or hide password">
-                  <img src="../assets/img/eye-slash.svg" alt="" />
+                  <img src="../assets/img/eye-slash.svg" alt="" aria-hidden="true" />
                 </button>
               </div>
             </div>
 
             <div class="profile-actions">
-              <button type="button" class="profile-action-primary">CONFIRM</button>
-              <button type="button" class="profile-action-secondary">CANCEL</button>
+              <button type="button" class="profile-action-primary" aria-label="Confirm profile changes">CONFIRM</button>
+              <button type="button" class="profile-action-secondary" aria-label="Cancel profile changes">CANCEL</button>
             </div>
           </div>
         </section>
 
-        <section class="profile-stats-row" aria-label="Profile stats">
-          <article class="current-unit-card">
+        <section class="profile-stats-row" aria-label="Estadísticas del perfil">
+          <article class="current-unit-card" aria-label="Unidad actual">
             <div class="current-unit-header">
-              <img class="current-unit-icon" src="../assets/img/icon-lightning.svg" alt="" />
+              <img class="current-unit-icon" src="../assets/img/icon-lightning.svg" alt="" aria-hidden="true" />
               <div class="current-unit-copy">
                 <div class="current-unit-title-row">
                   <h2 class="current-unit-title">Current Unit</h2>
-                  <span class="current-unit-index">2</span>
+                  <span class="current-unit-index" aria-label="Unidad 2">2</span>
                 </div>
-                <div class="current-unit-scale">
+                <div class="current-unit-scale" aria-hidden="true">
                   <span>U1</span>
-                  <div class="progress-track current-unit-track">
+                  <!-- WCAG 1.3.1 — progressbar para progreso de unidad -->
+                  <div class="progress-track current-unit-track"
+                       role="progressbar"
+                       aria-valuenow="58"
+                       aria-valuemin="0"
+                       aria-valuemax="100"
+                       aria-label="Progreso de la unidad actual: 58%">
                     <div class="progress-fill" style="width: 58%"></div>
                   </div>
                   <span>U2</span>
@@ -117,18 +131,23 @@
               </div>
             </div>
             <div class="current-unit-action">
-              <button type="button" class="btn-purple current-unit-start">START</button>
+              <button type="button" class="btn-purple current-unit-start" aria-label="Start current unit">START</button>
             </div>
           </article>
 
-          <article class="score-card">
+          <article class="score-card" aria-label="Puntuación total">
             <h2 class="score-title">Total Score</h2>
-            <img class="score-icon" src="../assets/img/icon-star.svg" alt="" />
+            <img class="score-icon" src="../assets/img/icon-star.svg" alt="" aria-hidden="true" />
             <div class="score-value">2450 P</div>
           </article>
         </section>
       </main>
     </div>
   </div>
+
+  <script src="../js/header-controls.js"></script>
+  <script src="../js/profile.js"></script>
+  <script src="../js/modal-support.js"></script>
 </body>
+
 </html>

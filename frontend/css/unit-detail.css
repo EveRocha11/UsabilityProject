@@ -1,15 +1,42 @@
-/* Progress banner */
+/* ── Unit banner ────────────────────────────────────────────────────────── */
 .unit-banner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 16px;
   padding: 20px 32px;
   margin-bottom: 24px;
   border-radius: 18px;
   background-image: var(--gradient-primary);
 }
 
+.unit-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+  padding: 7px 14px;
+  border-radius: 12px;
+  background-color: rgba(255,255,255,0.2);
+  color: var(--color-surface);
+  font-family: var(--font-semibold);
+  font-size: 14px;
+  text-decoration: none;
+  transition: background-color 0.15s;
+}
+
+.unit-back-btn:hover,
+.unit-back-btn:focus {
+  background-color: rgba(255,255,255,0.35);
+  outline: none;
+}
+
+.unit-back-btn:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+}
+
 .unit-banner h1 {
+  flex: 1;
   font-family: var(--font-bold);
   font-weight: 700;
   font-size: 26px;
@@ -20,14 +47,12 @@
 .unit-banner-lock {
   width: 30px;
   height: 30px;
+  flex-shrink: 0;
   filter: brightness(0) invert(1);
 }
 
-/* Grammar and structures card */
+/* ── Grammar card: single lavender card with 2-col bullet list ──────────── */
 .grammar-card {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 48px;
   padding: 24px 28px;
   margin-bottom: 24px;
   border-radius: 16px;
@@ -35,82 +60,130 @@
   border: 1.5px solid var(--color-border-soft);
 }
 
-.grammar-card.is-single-col {
-  grid-template-columns: 1fr;
+.grammar-list {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 0;
+  columns: 2;
+  column-gap: 48px;
 }
 
-.grammar-col {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+.grammar-list li {
+  break-inside: avoid;
+  margin-bottom: 20px;
 }
 
-.grammar-item h3 {
-  margin-bottom: 6px;
+.grammar-list li strong {
+  display: block;
   font-family: var(--font-bold);
   font-weight: 700;
-  font-size: 17px;
+  font-size: 15px;
   color: var(--color-text-dark);
+  margin-bottom: 4px;
 }
 
-.grammar-item p {
+.grammar-list li span {
   font-family: var(--font-regular);
-  font-size: 12px;
+  font-size: 13px;
   color: var(--color-text-secondary);
+  line-height: 1.5;
 }
 
-/* Lessons */
+/* ── Lessons row ────────────────────────────────────────────────────────── */
 .lessons-row {
   display: flex;
   gap: 16px;
 }
 
+/* ── Lesson card: icon on left, text on right, button at bottom ─────────── */
 .lesson-card {
   display: flex;
   flex: 1;
   flex-direction: column;
-  align-items: center;
-  gap: 16px;
+  justify-content: space-between;
   padding: 20px;
-  text-align: center;
   background-color: var(--color-surface);
   border-radius: 16px;
   border: 1.5px solid var(--color-border-soft);
+  cursor: default;
+}
+
+.lesson-card.is-locked {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+.lesson-card.is-locked:focus {
+  outline: 3px solid var(--color-purple);
+  outline-offset: 2px;
+}
+
+.lesson-card-top {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin-bottom: 16px;
 }
 
 .lesson-icon-box {
+  flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 96px;
-  height: 96px;
-  flex-shrink: 0;
-  border-radius: 36px;
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
   background-color: var(--color-level-bg);
   border: 1px solid var(--color-border);
 }
 
 .lesson-icon-box img {
-  width: 46px;
-  height: 46px;
+  width: 36px;
+  height: 36px;
 }
 
 .lesson-card-title {
-  flex: 1;
-  display: flex;
-  align-items: center;
   font-family: var(--font-bold);
   font-weight: 700;
-  font-size: 17px;
+  font-size: 15px;
+  line-height: 1.4;
   color: var(--color-text-dark);
 }
 
-.lesson-lock-icon {
-  width: 26px;
-  height: 26px;
+/* ── Lesson card bottom area ────────────────────────────────────────────── */
+.lesson-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .lesson-start-btn {
   padding: 8px 20px;
+  font-size: 13px;
+  font-family: var(--font-bold);
+}
+
+.lesson-lock-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.lesson-done-tag {
+  font-family: var(--font-semibold);
   font-size: 12px;
+  color: var(--color-success);
+  margin-right: 6px;
+}
+
+/* ── Keyboard-mode focus rings (applied by modal-accessibility.js) ───────── */
+:root.keyboard-mode *:focus {
+  outline: 3px solid var(--color-purple) !important;
+  outline-offset: 3px !important;
+}
+
+/* ── Screen-reader mode: hide decorative elements visually too ───────────── */
+:root.screen-reader .lesson-icon-box {
+  border-color: var(--color-purple);
 }

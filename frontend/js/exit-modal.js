@@ -19,4 +19,9 @@
 
   document.querySelector('.exit-modal-btn-cancel').addEventListener('click', goBack);
   document.querySelector('.exit-modal-close').addEventListener('click', goBack);
+
+  // WCAG 2.1.2 — Escape cierra el modal, igual que en el resto de overlays del proyecto
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') goBack();
+  });
 })();
