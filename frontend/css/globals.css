@@ -14,14 +14,14 @@
   --color-border-soft: #ddd6fe;
   --color-border-input: #e5e5e5;
   --color-text-dark: #1c1916;
-  --color-text-muted: #78726d;
+  --color-text-muted: #6d6660;
   --color-text-secondary: #57534e;
-  --color-text-faint: #9b9aa3;
+  --color-text-faint: #6c6a74;
   --color-purple: #7c3aed;
   --color-purple-soft: #c4b5fd;
   --color-purple-track: #ece9fd;
-  --color-success: #84cc16;
-  --color-accent: #d45038;
+  --color-success: #15803d;
+  --color-accent: #b3472f;
   --gradient-primary: linear-gradient(100deg, #7c3aed 0%, #a78bfa 100%);
   --shadow-card: 0px 8px 40px rgba(124, 58, 237, 0.1);
   --shadow-soft: 0px 10px 24px rgba(28, 25, 22, 0.06);
@@ -186,7 +186,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-purple-soft);
+  background-color: var(--color-purple);
   border: none;
   border-radius: var(--radius-button);
   cursor: pointer;

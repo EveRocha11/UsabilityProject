@@ -118,6 +118,10 @@
   height: 52px;
 }
 
+.signup-card .cta-continue {
+  background-color: var(--color-purple);
+}
+
 /* Error message spans — positioned below each field */
 #err-name     { top: 200px; left: 36px; }
 #err-lastname { top: 200px; left: 242px; }
