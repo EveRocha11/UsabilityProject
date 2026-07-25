@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,7 +15,7 @@
 
 <body>
   <!-- WCAG 2.4.1 — Saltar al contenido principal -->
-  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <div class="dashboard-page">
     <header class="dashboard-header">
@@ -24,34 +24,34 @@
         <span class="brand-name">Nivela</span>
       </div>
       <div class="header-actions">
-        <button type="button" class="header-btn" aria-label="Cambiar tamaño de texto">Aa</button>
-        <button type="button" class="header-btn header-btn-icon" aria-label="Alternar modo oscuro/claro">◐</button>
+        <button type="button" class="header-btn" aria-label="Change text size">Aa</button>
+        <button type="button" class="header-btn header-btn-icon" aria-label="Toggle dark/light mode">◐</button>
         <div class="avatar" id="header-avatar" aria-hidden="true">A</div>
       </div>
     </header>
 
     <div class="dashboard-body">
-      <aside class="sidebar" aria-label="Navegación principal">
+      <aside class="sidebar" aria-label="Main navigation">
         <nav class="nav-list" role="navigation">
-          <a class="nav-item is-active" href="dashboard.html" aria-label="Inicio">
+          <a class="nav-item is-active" href="dashboard.html" aria-label="Home">
             <img class="nav-icon" src="../assets/img/icon-home.svg" alt="" aria-hidden="true" />
             <span>Home</span>
           </a>
-          <a class="nav-item" href="challenges.html" aria-label="Desafíos">
+          <a class="nav-item" href="challenges.html" aria-label="Challenges">
             <img class="nav-icon" src="../assets/img/icon-sword.svg" alt="" aria-hidden="true" />
             <span>Challenges</span>
           </a>
-          <a class="nav-item" href="units.html" aria-label="Unidades">
+          <a class="nav-item" href="units.html" aria-label="Units">
             <img class="nav-icon" src="../assets/img/icon-path.svg" alt="" aria-hidden="true" />
             <span>Units</span>
           </a>
-          <a class="nav-item" href="modal-accessibility.html" aria-label="Accesibilidad">
+          <a class="nav-item" href="modal-accessibility.html" aria-label="Accessibility">
             <img class="nav-icon" src="../assets/img/icon-person.svg" alt="" aria-hidden="true" />
             <span>Accesibility</span>
           </a>
         </nav>
 
-        <a class="nav-item nav-footer-item" href="modal-support.html" aria-label="Ayuda">
+        <a class="nav-item nav-footer-item" href="modal-support.html" aria-label="Help">
           <img class="help-icon" src="../assets/img/icon-help.svg" alt="" aria-hidden="true" />
           <span>Help</span>
         </a>
@@ -59,7 +59,7 @@
 
       <main class="main-content lesson-main" id="main-content">
         <div class="lesson-top-bar">
-          <button type="button" class="lesson-close" id="close-btn" aria-label="Salir de la lección">
+          <button type="button" class="lesson-close" id="close-btn" aria-label="Exit lesson">
             <img src="../assets/img/icon-close.svg" alt="" aria-hidden="true" />
           </button>
           <div class="progress-track lesson-progress-track"
@@ -67,17 +67,17 @@
                aria-valuenow="0"
                aria-valuemin="0"
                aria-valuemax="100"
-               aria-label="Progreso de la lección">
+               aria-label="Lesson progress" tabindex="0">
             <div class="progress-fill" id="lesson-progress-fill" style="width: 0%"></div>
           </div>
-          <div class="lesson-hearts" aria-label="5 corazones restantes">
+          <div class="lesson-hearts" aria-label="5 lives remaining" tabindex="0">
             <img src="../assets/img/icon-heart.svg" alt="" aria-hidden="true" />
             <span aria-hidden="true">5</span>
           </div>
         </div>
 
         <div class="lesson-exercise">
-          <h1 class="lesson-instruction">Repeat this sentence</h1>
+          <h1 class="lesson-instruction" tabindex="0">Repeat this sentence</h1>
 
           <div class="lesson-exercise-row">
             <div class="lesson-avatar-box">
@@ -108,13 +108,13 @@
               <div class="lesson-sentence-row">
                 <!-- WCAG 1.1.1 / 2.1.1 — ícono de altavoz con alt descriptivo y alcanzable por teclado -->
                 <img class="lesson-speaker-icon" id="speaker-icon" src="../assets/img/icon-speaker.svg"
-                  alt="Escuchar la oración en voz alta" role="button" tabindex="0" />
+                  alt="Listen to the sentence out loud" role="button" tabindex="0" />
                 <!-- WCAG 3.1.2 — contenido en inglés marcado con lang="en" -->
-                <div class="lesson-sentence-bubble" id="sentence-bubble" lang="en">Her first name is Anna, nice to meet you.</div>
+                <div class="lesson-sentence-bubble" id="sentence-bubble" lang="en" tabindex="0">Her first name is Anna, nice to meet you.</div>
               </div>
 
               <button type="button" class="lesson-speak-btn" id="speak-btn"
-                      aria-label="Activar micrófono para repetir la oración">
+                      aria-label="Activate microphone to repeat the sentence">
                 <span class="lesson-speak-btn-icon" aria-hidden="true">
                   <img src="../assets/img/icon-mic.svg" alt="" />
                 </span>

@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,7 +15,7 @@
 
 <body>
   <!-- WCAG 2.4.1 — Saltar al contenido principal -->
-  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <div class="dashboard-page">
     <header class="dashboard-header">
@@ -24,33 +24,33 @@
         <span class="brand-name">Nivela</span>
       </div>
       <div class="header-actions">
-        <button type="button" class="header-btn" aria-label="Cambiar tamaño de texto">Aa</button>
-        <button type="button" class="header-btn header-btn-icon" aria-label="Alternar modo oscuro/claro">◐</button>
+        <button type="button" class="header-btn" aria-label="Change text size">Aa</button>
+        <button type="button" class="header-btn header-btn-icon" aria-label="Toggle dark/light mode">◐</button>
         <div class="avatar" id="header-avatar" aria-hidden="true">A</div>
       </div>
     </header>
 
     <div class="dashboard-body">
-      <aside class="sidebar" aria-label="Navegación principal">
+      <aside class="sidebar" aria-label="Main navigation">
         <nav class="nav-list" role="navigation">
-          <a class="nav-item is-active" href="dashboard.html" aria-label="Inicio">
+          <a class="nav-item is-active" href="dashboard.html" aria-label="Home">
             <img class="nav-icon" src="../assets/img/icon-home.svg" alt="" aria-hidden="true" />
             <span>Home</span>
           </a>
-          <a class="nav-item" href="challenges.html" aria-label="Desafíos">
+          <a class="nav-item" href="challenges.html" aria-label="Challenges">
             <img class="nav-icon" src="../assets/img/icon-sword.svg" alt="" aria-hidden="true" />
             <span>Challenges</span>
           </a>
-          <a class="nav-item" href="units.html" aria-label="Unidades">
+          <a class="nav-item" href="units.html" aria-label="Units">
             <img class="nav-icon" src="../assets/img/icon-path.svg" alt="" aria-hidden="true" />
             <span>Units</span>
           </a>
-          <a class="nav-item" href="modal-accessibility.html" aria-label="Accesibilidad">
+          <a class="nav-item" href="modal-accessibility.html" aria-label="Accessibility">
             <img class="nav-icon" src="../assets/img/icon-person.svg" alt="" aria-hidden="true" />
             <span>Accesibility</span>
           </a>
         </nav>
-        <a class="nav-item nav-footer-item" href="modal-support.html" aria-label="Ayuda">
+        <a class="nav-item nav-footer-item" href="modal-support.html" aria-label="Help">
           <img class="help-icon" src="../assets/img/icon-help.svg" alt="" aria-hidden="true" />
           <span>Help</span>
         </a>
@@ -58,7 +58,7 @@
 
       <main class="main-content lesson-main" id="main-content">
         <div class="lesson-top-bar">
-          <button type="button" class="lesson-close" id="close-btn" aria-label="Salir de la lección">
+          <button type="button" class="lesson-close" id="close-btn" aria-label="Exit lesson">
             <img src="../assets/img/icon-close.svg" alt="" aria-hidden="true" />
           </button>
           <div class="progress-track lesson-progress-track"
@@ -66,33 +66,33 @@
                aria-valuenow="33"
                aria-valuemin="0"
                aria-valuemax="100"
-               aria-label="Progreso de la lección">
+               aria-label="Lesson progress" tabindex="0">
             <div class="progress-fill" id="lesson-progress-fill" style="width: 33%"></div>
           </div>
-          <div class="lesson-hearts" aria-label="5 corazones restantes">
+          <div class="lesson-hearts" aria-label="5 lives remaining" tabindex="0">
             <img src="../assets/img/icon-heart.svg" alt="" aria-hidden="true" />
             <span aria-hidden="true">5</span>
           </div>
         </div>
 
         <!-- Step badge -->
-        <p class="lesson-step-badge">Exercise 2 of 3 — Fill in the blank</p>
+        <p class="lesson-step-badge" tabindex="0">Exercise 2 of 3 — Fill in the blank</p>
 
         <!-- Fill exercise -->
         <div class="lesson-exercise fill-exercise">
           <div class="fill-header">
-            <h1 class="lesson-instruction" id="fill-instruction">Look at the image and complete each sentence.</h1>
+            <h1 class="lesson-instruction" id="fill-instruction" tabindex="0">Look at the image and complete each sentence.</h1>
             <span class="fill-counter" id="fill-counter">1 / 4</span>
           </div>
 
           <!-- Visual description card (accessible) -->
-          <div class="fill-image-card" id="fill-image-card">
+          <div class="fill-image-card" id="fill-image-card" tabindex="0">
             <span class="fill-image-label">Visual context</span>
             <p class="fill-image-desc" id="fill-image-desc"></p>
           </div>
 
           <!-- Sentence with blank -->
-          <div class="fill-sentence" id="fill-sentence" aria-live="polite">
+          <div class="fill-sentence" id="fill-sentence" aria-live="polite" tabindex="0">
             <span id="fill-before"></span>
             <span class="fill-blank" id="fill-blank">_______</span>
             <span id="fill-after"></span>
