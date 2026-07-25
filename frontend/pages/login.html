@@ -3,7 +3,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta charset="utf-8" />
-  <title>Nivela - Iniciar sesión</title>
+  <title>Nivela - Sign in</title>
   <link rel="stylesheet" href="../css/globals.css">
   <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/login.css">
@@ -11,12 +11,11 @@
 </head>
 <body>
   <!-- WCAG 2.4.1 — Enlace para saltar al contenido principal -->
-  <a href="#main-content" class="skip-link">Skip to sign-in form</a>
 
   <div class="element-login auth-page">
     <div class="rectangle" aria-hidden="true"></div>
 
-    <main id="main-content" class="login-card auth-card" aria-label="Log-in form">
+    <main id="main-content" class="login-card auth-card" aria-label="Login form container" tabindex="1">
       <!-- WCAG 1.3.1 — <label> vinculado al input mediante for/id -->
       <label class="field-label label-email" for="login-email">Email</label>
       <div class="field-input input-email" id="wrap-email">
@@ -55,8 +54,8 @@
       <p class="text-secondary sign-up-link">Don't have an account? <a href="signup.html">Sign up</a></p>
     </main>
 
-    <!-- WCAG 1.1.1 — imágenes decorativas con alt="" y aria-hidden -->
-    <div class="login-logo" aria-hidden="true">
+    <!-- WCAG 1.1.1 — focusable logo -->
+    <div class="login-logo" tabindex="2" aria-label="Nivela logo" role="img">
       <div class="logo-vector logo-01"><img src="../assets/img/logo-01.svg" alt="" /></div>
       <div class="logo-vector logo-02"><img src="../assets/img/logo-02.svg" alt="" /></div>
       <div class="logo-vector logo-03a"><img src="../assets/img/logo-03.svg" alt="" /></div>

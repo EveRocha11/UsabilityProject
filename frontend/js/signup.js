@@ -85,32 +85,45 @@
 
   continueBtn.addEventListener('click', () => {
     let valid = true;
+    let firstInvalidInput = null;
 
     if (!nameInput.value.trim()) {
       setError(wrapName, errName, 'Name is required', nameInput); valid = false;
+      if (!firstInvalidInput) firstInvalidInput = nameInput;
     }
     if (!lastnameInput.value.trim()) {
       setError(wrapLastname, errLastname, 'Lastname is required', lastnameInput); valid = false;
+      if (!firstInvalidInput) firstInvalidInput = lastnameInput;
     }
     if (!emailInput.value.trim()) {
       setError(wrapEmail, errEmail, 'Email is required', emailInput); valid = false;
+      if (!firstInvalidInput) firstInvalidInput = emailInput;
     } else if (!validateEmail(emailInput.value.trim())) {
       setError(wrapEmail, errEmail, 'Enter a valid email address', emailInput); valid = false;
+      if (!firstInvalidInput) firstInvalidInput = emailInput;
     }
     if (!passwordInput.value || !validatePassword(passwordInput.value)) {
       setPasswordError(); valid = false;
+      if (!firstInvalidInput) firstInvalidInput = passwordInput;
     }
     if (!confirmInput.value) {
       setError(wrapConfirm, errConfirm, 'Please confirm your password', confirmInput); valid = false;
+      if (!firstInvalidInput) firstInvalidInput = confirmInput;
     } else if (confirmInput.value !== passwordInput.value) {
       setError(wrapConfirm, errConfirm, 'Passwords do not match', confirmInput); valid = false;
+      if (!firstInvalidInput) firstInvalidInput = confirmInput;
     }
 
-    if (!valid) return;
+    if (!valid) {
+      if (firstInvalidInput) firstInvalidInput.focus();
+      return;
+    }
 
     const accounts = JSON.parse(localStorage.getItem('nivela_accounts') || '[]');
     if (accounts.some(a => a.email === emailInput.value.trim())) {
-      setError(wrapEmail, errEmail, 'This email is already registered', emailInput); return;
+      setError(wrapEmail, errEmail, 'This email is already registered', emailInput); 
+      emailInput.focus();
+      return;
     }
 
     accounts.push({
