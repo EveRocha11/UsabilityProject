@@ -58,8 +58,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Set total score
     const scoreValue = document.querySelector(".score-value");
+    const scoreCard = document.querySelector(".score-card");
     if (scoreValue) {
         scoreValue.textContent = p.points + ' P';
+    }
+    if (scoreCard) {
+        scoreCard.setAttribute("aria-label", "Total Score: " + p.points + " points");
     }
 
     // Calculate current unit ID
@@ -85,9 +89,14 @@ document.addEventListener("DOMContentLoaded", () => {
         unitIndexEl.textContent = currentUnitId;
     }
 
+    const progressTrackEl = document.querySelector(".current-unit-track");
     const progressFillEl = document.querySelector(".current-unit-track .progress-fill");
     if (progressFillEl) {
         progressFillEl.style.width = pct + '%';
+    }
+    if (progressTrackEl) {
+        progressTrackEl.setAttribute('aria-valuenow', pct);
+        progressTrackEl.setAttribute('aria-label', `Current unit progress: ${pct}%`);
     }
 
     const scaleSpans = document.querySelectorAll(".current-unit-scale span");
