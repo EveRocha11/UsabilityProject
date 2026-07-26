@@ -755,3 +755,115 @@ html.dark-mode .shortcuts-row td,
 html.dark-mode .shortcuts-row th      { color: var(--color-text-dark); }
 html.dark-mode .accessibility-grid    { border-color: var(--color-border); }
 html.dark-mode .accessibility-grid::before { background: var(--color-border); }
+
+/* ── Dark mode: íconos SVG negros → lila claro (#c4b5fd) para visibilidad ── */
+html.dark-mode .level-card.is-locked .level-status-icon,
+html.dark-mode .unit-lock-icon,
+html.dark-mode .lesson-lock-icon,
+html.dark-mode .lesson-close img,
+html.dark-mode .help-icon {
+  filter: brightness(0) saturate(100%) invert(84%) sepia(18%) saturate(400%) hue-rotate(220deg);
+}
+
+/* ── Dark mode: fondos hardcodeados en blanco → tonos oscuros de la paleta ── */
+html.dark-mode .daily-challenge-icon-box {
+  background-color: var(--color-surface-soft);
+}
+html.dark-mode .daily-challenge-progress-track,
+html.dark-mode .unit-progress-track {
+  background-color: var(--color-border);
+}
+html.dark-mode .timeline-dot.is-upcoming {
+  background-color: var(--color-surface);
+}
+
+/* ── Dark mode: estados "completado" con fondo verde claro hardcodeado ───── */
+html.dark-mode .challenge-card.is-complete,
+html.dark-mode .daily-challenge-card.is-complete,
+html.dark-mode .challenge-grid-card.is-complete {
+  background-color: var(--color-surface-muted);
+  border-color: var(--color-success);
+}
+html.dark-mode .challenge-complete-badge,
+html.dark-mode .daily-challenge-card.is-complete .daily-challenge-fraction,
+html.dark-mode .challenge-grid-card.is-complete .challenge-grid-title {
+  color: #4ade80;
+}
+
+/* ── Dark mode: estados de ejercicio (hover / selected / correct / wrong) ── */
+/* Principio 1.4.3: contraste mínimo 4.5:1 en todos los estados interactivos */
+html.dark-mode .match-card:hover:not(:disabled),
+html.dark-mode .fill-option-btn:hover:not(:disabled),
+html.dark-mode .dialogue-choice-btn:hover:not(:disabled) {
+  background-color: var(--color-surface-soft);
+  border-color: var(--color-purple-soft);
+  color: var(--color-text-dark);
+}
+
+html.dark-mode .match-card.is-selected,
+html.dark-mode .fill-option-btn.is-selected {
+  background-color: var(--color-surface-soft);
+  border-color: var(--color-purple);
+  color: var(--color-text-dark);
+}
+
+html.dark-mode .match-card.is-correct,
+html.dark-mode .fill-option-btn.is-correct,
+html.dark-mode .dialogue-choice-btn.is-correct {
+  background-color: #052e16;
+  border-color: var(--color-success);
+  color: #86efac;
+}
+
+html.dark-mode .match-card.is-wrong,
+html.dark-mode .fill-option-btn.is-wrong,
+html.dark-mode .dialogue-choice-btn.is-wrong {
+  background-color: #450a0a;
+  border-color: #ef4444;
+  color: #fca5a5;
+}
+
+/* Visual-context card y dialogue choices: fondo blanco hardcodeado */
+html.dark-mode .fill-image-card,
+html.dark-mode .dialogue-choices {
+  background-color: var(--color-surface-muted);
+  border-color: var(--color-border);
+}
+
+/* Dialogue: botones de opciones y burbujas propias */
+html.dark-mode .dialogue-choice-btn {
+  background-color: var(--color-surface);
+  border-color: var(--color-border-soft);
+  color: var(--color-text-dark);
+}
+html.dark-mode .dialogue-bubble-row.row-right .dialogue-bubble {
+  background-color: var(--color-surface-soft);
+  border-color: var(--color-border-soft);
+}
+html.dark-mode .dialogue-char-pill:nth-child(1) { background-color: var(--color-surface-soft); }
+html.dark-mode .dialogue-char-pill:nth-child(2) { background-color: #052e16; }
+html.dark-mode .dialogue-char-pill:nth-child(3) { background-color: #431407; }
+
+/* Speak button icon box */
+html.dark-mode .lesson-speak-btn-icon { background-color: var(--color-surface); }
+html.dark-mode .lesson-speak-btn.is-done .lesson-speak-btn-icon { background-color: #052e16; }
+html.dark-mode .lesson-speak-btn.is-recording .lesson-speak-btn-icon { background-color: #450a0a; }
+
+/* Feedback: variantes skip y wrong con fondos claros hardcodeados */
+html.dark-mode #feedback-card[data-type="skip"] {
+  background-color: #422006;
+  border-color: #d97706;
+}
+html.dark-mode #feedback-section[data-type="skip"] .lesson-feedback-label { color: #fbbf24; }
+html.dark-mode #feedback-card[data-type="wrong"] {
+  background-color: #450a0a;
+  border-color: #ef4444;
+}
+html.dark-mode #feedback-section[data-type="wrong"] .lesson-feedback-label { color: #f87171; }
+
+/* CHECK button disabled en dark mode */
+html.dark-mode #check-btn:disabled {
+  background-color: var(--color-surface-soft);
+  color: var(--color-text-faint);
+  cursor: not-allowed;
+}

@@ -181,9 +181,14 @@
   document.querySelectorAll('.nav-item').forEach(link => {
     link.addEventListener('click', e => {
       const href = link.getAttribute('href');
+      if (href === 'modal-accessibility.html') return;
       triggerExit(e, href && href !== '#' ? href : 'dashboard.html');
     });
   });
+  const avatarLink = document.querySelector('.avatar-link');
+  if (avatarLink) {
+    avatarLink.addEventListener('click', e => triggerExit(e, 'profile.html'));
+  }
 
   // Start conversation
   setTimeout(advanceLine, 300);

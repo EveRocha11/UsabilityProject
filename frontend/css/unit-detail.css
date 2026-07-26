@@ -60,6 +60,11 @@
   border: 1.5px solid var(--color-border-soft);
 }
 
+.grammar-card:focus {
+  outline: 3px solid var(--color-purple);
+  outline-offset: 2px;
+}
+
 .grammar-list {
   list-style: disc;
   padding-left: 20px;

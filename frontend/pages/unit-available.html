@@ -75,8 +75,11 @@
         <!-- Grammar section -->
         <section aria-labelledby="grammar-heading">
           <h2 id="grammar-heading" class="section-title">Grammar and Structures</h2>
-          <div class="grammar-card">
-            <ul id="grammar-list" class="grammar-list" aria-label="Grammar topics covered in this unit">
+          <!-- tabindex="0" makes the card reachable via Tab so screen reader users
+               navigating with keyboard don't skip the non-interactive grammar list -->
+          <div class="grammar-card" tabindex="0" aria-labelledby="grammar-heading">
+            <ul id="grammar-list" class="grammar-list" aria-live="polite"
+                aria-label="Grammar topics covered in this unit">
               <!-- Populated by unit-detail.js -->
             </ul>
           </div>

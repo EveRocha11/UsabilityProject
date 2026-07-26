@@ -147,9 +147,14 @@
   document.querySelectorAll('.nav-item').forEach(link => {
     link.addEventListener('click', e => {
       const href = link.getAttribute('href');
+      if (href === 'modal-accessibility.html') return; // header-controls.js opens modal
       triggerExit(e, href && href !== '#' ? href : 'dashboard.html');
     });
   });
+  const avatarLink = document.querySelector('.avatar-link');
+  if (avatarLink) {
+    avatarLink.addEventListener('click', e => triggerExit(e, 'profile.html'));
+  }
 
   continueBtn.addEventListener('click', () => {
     globalThis.location.href = 'lesson-fill.html';
